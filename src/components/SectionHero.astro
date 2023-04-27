@@ -1,0 +1,51 @@
+---
+import FullScreenWrapper from './FullScreenWrapper.astro';
+import ContentContainer from './ContentContainer.astro';
+---
+
+<FullScreenWrapper>
+	<ContentContainer>
+		<p id="million-title"><span class="million-logo">M</span>illion</p>
+		<h1 id="tagline">
+			The Winchester Web Design,<br /> Digital Marketing & Consultancy Agency<span
+				class="text-highlight">.</span
+			>
+		</h1>
+	</ContentContainer>
+</FullScreenWrapper>
+
+<style lang="scss">
+	@import '../styles/colors';
+
+	#million-title {
+		font-size: 18rem;
+		font-weight: bold;
+		margin: 20vh 0 0 0;
+	}
+
+	.million-logo {
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 1.15rem;
+			top: 3.2rem;
+			width: 86.5%;
+			height: 1.75rem;
+			background-color: $white;
+		}
+	}
+
+	#tagline {
+		font-size: 2.3rem;
+		line-height: 3.5rem;
+		text-align: center;
+		color: $grey2;
+		margin-top: 0;
+
+		.text-highlight {
+			font-weight: bolder;
+		}
+	}
+</style>

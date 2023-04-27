@@ -1,17 +1,12 @@
 ---
+import SectionHero from '../components/SectionHero.astro';
+import SectionContent from '../components/SectionContent.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main></main>
+<Layout title="Million">
+	<main>
+		<SectionHero />
+		<SectionContent />
+	</main>
 </Layout>
-
-<style lang="scss">
-	@import '../styles/colors';
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-		background: $testColor;
-	}
-</style>

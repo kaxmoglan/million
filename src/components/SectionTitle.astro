@@ -1,0 +1,31 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<h3 class="section-title text-grey2">{title}</h3>
+
+<style lang="scss">
+	@import '../styles/colors';
+
+	.section-title {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		font-size: 2rem;
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: $highlight;
+			top: 3rem;
+
+			width: 10rem;
+			height: 3px;
+		}
+	}
+</style>

@@ -2,12 +2,25 @@
 import ContentContainer from './ContentContainer.astro';
 import FlexWrapper from './FlexWrapper.astro';
 import SectionTitle from './SectionTitle.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
 ---
 
-<FlexWrapper>
-	<ContentContainer>
-		<SectionTitle title="What do we do?" />
-	</ContentContainer>
-</FlexWrapper>
+<div class="margin-wrapper">
+	<FlexWrapper>
+		<ContentContainer>
+			<SectionTitle title={title} />
+			<slot />
+		</ContentContainer>
+	</FlexWrapper>
+</div>
 
-<style lang="scss"></style>
+<style lang="scss">
+	.margin-wrapper {
+		margin-bottom: 8rem;
+	}
+</style>

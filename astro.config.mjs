@@ -1,13 +1,8 @@
 import { defineConfig } from 'astro/config';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
-	// css: {
-	// 	preprocessorOptions: {
-	// 		scss: {
-	// 			// path to your scss variables
-	// 			additionalData: `@import "./styles/colors.scss";`,
-	// 		},
-	// 	},
-	// },
+	integrations: [react()],
 });

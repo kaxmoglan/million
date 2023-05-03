@@ -3,6 +3,7 @@ import SectionHero from '../components/SectionHero.astro';
 import SectionContent from '../components/SectionContent.astro';
 import Layout from '../layouts/Layout.astro';
 import SpanTextWhite from '../components/SpanTextWhite.astro';
+import { Form } from '../components/Form';
 ---
 
 <Layout title="Million">
@@ -15,7 +16,7 @@ import SpanTextWhite from '../components/SpanTextWhite.astro';
 					class="text-grey2">&</span
 				> host<span class="text-highlight">.</span>
 			</h2>
-			<div class="text-container">
+			<div class="container">
 				<p>
 					Here at <SpanTextWhite text="Million" />, we take you <SpanTextWhite
 						text="end to end"
@@ -44,7 +45,7 @@ import SpanTextWhite from '../components/SpanTextWhite.astro';
 					class="text-highlight">.</span
 				>
 			</h2>
-			<div class="text-container">
+			<div class="container">
 				<p>
 					<SpanTextWhite
 						text="Photo captions, social media posts, website copy, blog posts and more."
@@ -64,7 +65,7 @@ import SpanTextWhite from '../components/SpanTextWhite.astro';
 				>
 			</h2>
 
-			<div class="text-container">
+			<div class="container">
 				<p>
 					From <SpanTextWhite text="local" /> businesses, to <SpanTextWhite
 						text="Fortune 500"
@@ -87,7 +88,7 @@ import SpanTextWhite from '../components/SpanTextWhite.astro';
 				/>pricing<span class="text-highlight">.</span>
 			</h2>
 
-			<div class="text-container">
+			<div class="container">
 				<p>
 					<SpanTextWhite text="We hate hidden costs" /> so we don't have any. Everything
 					is <SpanTextWhite text="discussed and agreed with you upfront" />, we
@@ -102,15 +103,15 @@ import SpanTextWhite from '../components/SpanTextWhite.astro';
 				>
 			</h2>
 
-			<div class="text-container">
+			<div class="container">
 				<p>
 					We pride ourselves on being <SpanTextWhite
-						text="one team for all your digital needs"
-					/>. Whether you’re looking for <SpanTextWhite
+						text="one team for all your digital needs."
+					/> Whether you’re looking for <SpanTextWhite
 						text="video editing, filming, voiceovers"
 					/> and
 					<SpanTextWhite text="audio recording, music sourcing, social media" />
-					and <SpanTextWhite text="advertising campaigns" /> or <SpanTextWhite
+					and <SpanTextWhite text="advertising campaigns," /> or <SpanTextWhite
 						text="consultancy"
 					/> on any service we have to offer, <SpanTextWhite
 						text="we can help"
@@ -119,7 +120,11 @@ import SpanTextWhite from '../components/SpanTextWhite.astro';
 			</div>
 		</SectionContent>
 
-		<SectionContent title="Get In Touch" />
+		<SectionContent title="Get In Touch">
+			<div class="container">
+				<Form client:idle />
+			</div>
+		</SectionContent>
 	</main>
 </Layout>
 
@@ -140,7 +145,7 @@ import SpanTextWhite from '../components/SpanTextWhite.astro';
 		// }
 	}
 
-	.text-container {
+	.container {
 		width: 650px;
 		margin-bottom: 5rem;
 

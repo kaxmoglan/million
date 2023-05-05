@@ -33,11 +33,6 @@ import { Form } from '../components/Form';
 						text="maintenance."
 					/>
 				</p>
-				<p>
-					<SpanTextWhite text="One team" /> to cover <SpanTextWhite
-						text="all your digital needs"
-					/><span class="full-stop">.</span>
-				</p>
 			</div>
 
 			<h2 class="text-grey1">
@@ -70,14 +65,14 @@ import { Form } from '../components/Form';
 					From <SpanTextWhite text="local" /> businesses, to <SpanTextWhite
 						text="Fortune 500"
 					/> companies and <SpanTextWhite text="unicorn" /> tech
-					<SpanTextWhite text="startups" />, our team have collectively <SpanTextWhite
+					<SpanTextWhite text="startups," /> our team have collectively <SpanTextWhite
 						text="done it all."
 					/> Whether you're a startup searching for <SpanTextWhite
 						text="your voice,"
 					/> or a successful business looking for
 					<SpanTextWhite text="new outreach" /> or a <SpanTextWhite
 						text="full re-brand"
-					/> to reach new and exciting audiences, <SpanTextWhite
+					/> to reach new audiences, <SpanTextWhite
 						text="our team are here to help"
 					/><span class="full-stop">.</span>
 				</p>
@@ -108,9 +103,8 @@ import { Form } from '../components/Form';
 					We pride ourselves on being <SpanTextWhite
 						text="one team for all your digital needs."
 					/> Whether you’re looking for <SpanTextWhite
-						text="video editing, filming, voiceovers"
-					/> and
-					<SpanTextWhite text="audio recording, music sourcing, social media" />
+						text="video edting, photography, audio editing, music sourcing, social media"
+					/>
 					and <SpanTextWhite text="advertising campaigns," /> or <SpanTextWhite
 						text="consultancy"
 					/> on any service we have to offer, <SpanTextWhite
@@ -122,6 +116,13 @@ import { Form } from '../components/Form';
 
 		<SectionContent title="Get In Touch">
 			<div class="container">
+				<p>
+					For a <SpanTextWhite text="free consultation" /> with <SpanTextWhite
+						text="no obligation,"
+					/> get in touch and <SpanTextWhite
+						text="tell us about your project"
+					/><span class="full-stop">.</span>
+				</p>
 				<Form client:idle />
 			</div>
 		</SectionContent>
@@ -130,26 +131,42 @@ import { Form } from '../components/Form';
 
 <style lang="scss">
 	@import '../styles/colors';
+	@import '../styles/responsive';
+
 	h2 {
 		margin: 2rem 0;
 		text-align: center;
 		font-size: 5rem;
-		// transition: all 200ms ease-in-out;
 
 		.text-highlight {
 			padding-left: 0.2rem;
 		}
 
-		// &:hover {
-		// 	color: $white;
-		// }
+		@include sm-screen {
+			font-size: 4rem;
+		}
+
+		@include xs-screen {
+			font-size: 2.75rem;
+		}
+
+		@include xxs-screen {
+			font-size: 2rem;
+		}
 	}
 
 	.container {
 		width: 650px;
-		margin-bottom: 5rem;
+		margin-bottom: 3rem;
 
-		// border: 1px solid red;
+		@include sm-screen {
+			width: 600px;
+			padding: 0 1rem;
+		}
+
+		@include xs-screen {
+			width: 100%;
+		}
 
 		p {
 			// font-weight: 300;
@@ -159,6 +176,15 @@ import { Form } from '../components/Form';
 			color: $grey3;
 			line-height: 2rem;
 			transition: all 500ms ease-in-out;
+
+			@include sm-screen {
+				font-size: 1.4rem;
+				line-height: normal;
+			}
+
+			@include xs-screen {
+				font-size: 1rem;
+			}
 
 			&:hover {
 				color: white;

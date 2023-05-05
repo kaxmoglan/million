@@ -1,30 +1,60 @@
 ---
 import FullScreenWrapper from './FullScreenWrapper.astro';
-import ContentContainer from './ContentContainer.astro';
 ---
 
 <FullScreenWrapper>
-	<ContentContainer>
+	<div class="hero-container">
 		<p id="million-title"><span class="million-logo">M</span>illion</p>
 		<h1 id="tagline">
 			The Winchester Web Design,<br /> Digital Marketing & Consultancy Agency<span
 				class="text-highlight">.</span
 			>
 		</h1>
-	</ContentContainer>
+	</div>
 </FullScreenWrapper>
 
 <style lang="scss">
 	@import '../styles/colors';
+	@import '../styles/responsive';
+
+	.hero-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0;
+	}
 
 	#million-title {
 		font-size: 18rem;
 		font-weight: bold;
-		margin: 25vh 0 0 0;
+		margin: 0;
+
+		@include lg-screen {
+			font-size: 13rem;
+		}
+
+		@include sm-screen {
+			font-size: 9rem;
+		}
+
+		@include xs-screen {
+			font-size: 6rem;
+		}
+
+		@include xxs-screen {
+			font-size: 4rem;
+		}
 	}
 
 	.million-logo {
 		position: relative;
+
+		&:hover {
+			&::before {
+				transform: translateY(-5px);
+			}
+		}
 		&::before {
 			content: '';
 			display: block;
@@ -34,6 +64,31 @@ import ContentContainer from './ContentContainer.astro';
 			width: 86.5%;
 			height: 1.75rem;
 			background-color: $white;
+			transition: all 250ms ease-in-out;
+
+			@include lg-screen {
+				top: 2rem;
+				left: 0.8rem;
+				height: 1.5rem;
+			}
+
+			@include sm-screen {
+				top: 1.4rem;
+				left: 0.6rem;
+				height: 1rem;
+			}
+
+			@include xs-screen {
+				top: 0.9rem;
+				height: 0.7rem;
+				left: 0.4rem;
+			}
+
+			@include xxs-screen {
+				top: 0.6rem;
+				left: 0.25rem;
+				height: 0.5rem;
+			}
 		}
 	}
 
@@ -42,10 +97,29 @@ import ContentContainer from './ContentContainer.astro';
 		line-height: 3.5rem;
 		text-align: center;
 		color: $grey2;
-		margin-top: 0;
+		margin: 0;
+		padding: 0 2rem;
 
 		.text-highlight {
 			font-weight: bolder;
+		}
+
+		@include lg-screen {
+			font-size: 1.8rem;
+			line-height: normal;
+		}
+
+		@include sm-screen {
+			font-size: 1.4rem;
+		}
+
+		@include xs-screen {
+			font-size: 1.2rem;
+			margin-top: 1rem;
+		}
+
+		@include xxs-screen {
+			font-size: 1rem;
 		}
 	}
 </style>

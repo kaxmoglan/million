@@ -1,0 +1,65 @@
+/*
+-----------------------------------------
+DEFAULT: XL SCREEN: W: >= 1101px
+-----------------------------------------
+*/
+
+/*
+-----------------------------------------
+L SCREEN: W: < 1100px
+-----------------------------------------
+*/
+
+@mixin lg-screen {
+	@media only screen and (max-width: 1100px) {
+		@content;
+	}
+}
+
+/*
+-----------------------------------------
+M SCREEN: W: < 901px
+-----------------------------------------
+*/
+
+@mixin md-screen {
+	@media only screen and (max-width: 900px) {
+		@content;
+	}
+}
+
+/*
+-----------------------------------------
+S SCREEN: W: < 801px
+-----------------------------------------
+*/
+
+@mixin sm-screen {
+	@media screen and (max-width: 800px) {
+		@content;
+	}
+}
+
+/*
+-----------------------------------------
+XS SCREEN: W: < 601px
+-----------------------------------------
+*/
+
+@mixin xs-screen {
+	@media only screen and (max-width: 600px) {
+		@content;
+	}
+}
+
+/*
+-----------------------------------------
+XXS SCREEN: W: < 340px
+-----------------------------------------
+*/
+
+@mixin xxs-screen {
+	@media only screen and (max-width: 339px) {
+		@content;
+	}
+}

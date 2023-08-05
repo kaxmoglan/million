@@ -1,9 +1,10 @@
 ---
-import SectionHero from '../components/SectionHero.astro';
-import SectionContent from '../components/SectionContent.astro';
+import SectionHero from '../components/sections/SectionHero.astro';
+import SectionContent from '../components/sections/SectionContent.astro';
 import Layout from '../layouts/Layout.astro';
-import SpanTextWhite from '../components/SpanTextWhite.astro';
-import { Form } from '../components/Form';
+import Grey1 from '../components/SpanTextGrey1.astro';
+import { Form } from '../components/form/Form';
+import ArrowLink from '../components/ArrowLink.astro';
 ---
 
 <Layout title="Million">
@@ -16,22 +17,22 @@ import { Form } from '../components/Form';
 					class="text-grey2">&</span
 				> host<span class="text-highlight">.</span>
 			</h2>
+
+			<ArrowLink text="Learn More" link="" />
+
 			<div class="container">
 				<p>
-					Here at <SpanTextWhite text="Million" />, we take you <SpanTextWhite
+					Here at <Grey1 text="Million" />, we take you <Grey1
 						text="end to end"
-					/> from the initial <SpanTextWhite text="consultation" /> and <SpanTextWhite
+					/> from the initial <Grey1 text="consultation" /> and <Grey1
 						text="design & prototype"
-					/> process, through to <SpanTextWhite text="building" /> the website or
-					application on a tech-stack of <SpanTextWhite text="your choice" /> from
-					<SpanTextWhite text="Squarespace, Webflow, Shopify" /> and <SpanTextWhite
+					/> process, through to <Grey1 text="building" /> the website or application
+					on a tech-stack of <Grey1 text="your choice" /> from
+					<Grey1 text="Squarespace, Webflow, Shopify" /> and <Grey1
 						text="Wordpress,"
-					/> through to completely <SpanTextWhite
-						text="custom, bespoke solutions."
-					/> We then <SpanTextWhite text="host" /> all the technology for you and
-					offer <SpanTextWhite text="stress free support" /> and <SpanTextWhite
-						text="maintenance."
-					/>
+					/> through to completely <Grey1 text="custom, bespoke solutions." /> We
+					then <Grey1 text="host" /> all the technology for you and offer
+					<Grey1 text="stress free support" /> and <Grey1 text="maintenance." />
 				</p>
 			</div>
 
@@ -40,13 +41,16 @@ import { Form } from '../components/Form';
 					class="text-highlight">.</span
 				>
 			</h2>
+
+			<ArrowLink text="Learn More" link="" />
+
 			<div class="container">
 				<p>
-					<SpanTextWhite
+					<Grey1
 						text="Photo captions, social media posts, website copy, blog posts and more."
-					/> We can <SpanTextWhite text="write" /> them, we can <SpanTextWhite
+					/> We can <Grey1 text="write" /> them, we can <Grey1
 						text="schedule"
-					/> them, and we can <SpanTextWhite text="release" /> them. <SpanTextWhite
+					/> them, and we can <Grey1 text="release" /> them. <Grey1
 						text="We have you covered"
 					/>, whatever your writing needs may be<span class="full-stop">.</span>
 				</p>
@@ -60,21 +64,21 @@ import { Form } from '../components/Form';
 				>
 			</h2>
 
+			<ArrowLink text="Learn More" link="" />
+
 			<div class="container">
 				<p>
-					From <SpanTextWhite text="local" /> businesses, to <SpanTextWhite
+					From <Grey1 text="local" /> businesses, to <Grey1
 						text="Fortune 500"
-					/> companies and <SpanTextWhite text="unicorn" /> tech
-					<SpanTextWhite text="startups," /> our team have collectively <SpanTextWhite
+					/> companies and <Grey1 text="unicorn" /> tech
+					<Grey1 text="startups," /> our team have collectively <Grey1
 						text="done it all."
-					/> Whether you're a startup searching for <SpanTextWhite
-						text="your voice,"
-					/> or a successful business looking for
-					<SpanTextWhite text="new outreach" /> or a <SpanTextWhite
-						text="full re-brand"
-					/> to reach new audiences, <SpanTextWhite
-						text="our team are here to help"
-					/><span class="full-stop">.</span>
+					/> Whether you're a startup searching for <Grey1 text="your voice," />
+					or a successful business looking for
+					<Grey1 text="new outreach" /> or a <Grey1 text="full re-brand" /> to reach
+					new audiences, <Grey1 text="our team are here to help" /><span
+						class="full-stop">.</span
+					>
 				</p>
 			</div>
 
@@ -83,12 +87,14 @@ import { Form } from '../components/Form';
 				/>pricing<span class="text-highlight">.</span>
 			</h2>
 
+			<ArrowLink text="Learn More" link="" />
+
 			<div class="container">
 				<p>
-					<SpanTextWhite text="We hate hidden costs" /> so we don't have any. Everything
-					is <SpanTextWhite text="discussed and agreed with you upfront" />, we
-					can work to <SpanTextWhite text="fixed budgets" /> and deadlines and we
-					never ask for the full fee up front<span class="full-stop">.</span>
+					<Grey1 text="We hate hidden costs" /> so we don't have any. Everything
+					is <Grey1 text="discussed and agreed with you upfront" />, we can work
+					to <Grey1 text="fixed budgets" /> and deadlines and we never ask for the
+					full fee up front<span class="full-stop">.</span>
 				</p>
 			</div>
 
@@ -98,18 +104,20 @@ import { Form } from '../components/Form';
 				>
 			</h2>
 
+			<ArrowLink text="Learn More" link="" />
+
 			<div class="container">
 				<p>
-					We pride ourselves on being <SpanTextWhite
+					We pride ourselves on being <Grey1
 						text="one team for all your digital needs."
-					/> Whether you’re looking for <SpanTextWhite
+					/> Whether you’re looking for <Grey1
 						text="logo design, video edting, photography, audio editing, music sourcing, social media"
 					/>
-					and <SpanTextWhite text="advertising campaigns," /> or <SpanTextWhite
+					and <Grey1 text="advertising campaigns," /> or <Grey1
 						text="consultancy"
-					/> on any service we have to offer, <SpanTextWhite
-						text="we can help"
-					/><span class="full-stop">.</span>
+					/> on any service we have to offer, <Grey1 text="we can help" /><span
+						class="full-stop">.</span
+					>
 				</p>
 			</div>
 		</SectionContent>
@@ -117,11 +125,11 @@ import { Form } from '../components/Form';
 		<SectionContent title="Get In Touch">
 			<div class="container">
 				<p>
-					For a <SpanTextWhite text="free consultation" /> with <SpanTextWhite
+					For a <Grey1 text="free consultation" /> with <Grey1
 						text="no obligation,"
-					/> get in touch and <SpanTextWhite
-						text="tell us about your project"
-					/><span class="full-stop">.</span>
+					/> get in touch and <Grey1 text="tell us about your project" /><span
+						class="full-stop">.</span
+					>
 				</p>
 				<Form client:idle />
 			</div>
@@ -134,7 +142,7 @@ import { Form } from '../components/Form';
 	@import '../styles/responsive';
 
 	h2 {
-		margin: 2rem 0;
+		margin: 2rem 0 1rem 0;
 		text-align: center;
 		font-size: 5rem;
 
@@ -184,10 +192,6 @@ import { Form } from '../components/Form';
 
 			@include xs-screen {
 				font-size: 1rem;
-			}
-
-			&:hover {
-				color: white;
 			}
 
 			.full-stop {

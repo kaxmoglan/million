@@ -1,5 +1,5 @@
 ---
-import FullScreenWrapper from './FullScreenWrapper.astro';
+import FullScreenWrapper from '../wrappers/FullScreenWrapper.astro';
 ---
 
 <FullScreenWrapper>
@@ -14,8 +14,8 @@ import FullScreenWrapper from './FullScreenWrapper.astro';
 </FullScreenWrapper>
 
 <style lang="scss">
-	@import '../styles/colors';
-	@import '../styles/responsive';
+	@import '../../styles/colors';
+	@import '../../styles/responsive';
 
 	.hero-container {
 		display: flex;
@@ -77,7 +77,6 @@ import FullScreenWrapper from './FullScreenWrapper.astro';
 				left: 0.6rem;
 				height: 1rem;
 			}
-
 			@include xs-screen {
 				top: 0.9rem;
 				height: 0.7rem;

@@ -39,6 +39,15 @@ const { link, text } = Astro.props;
 			color: $grey3;
 			text-decoration: none;
 
+			&:hover {
+				color: $white;
+
+				svg {
+					color: $highlight;
+					transform: translateX(5px);
+				}
+			}
+
 			p {
 				margin: 0;
 			}
@@ -52,17 +61,10 @@ const { link, text } = Astro.props;
 				margin-left: 0.2rem;
 
 				svg {
+					height: 100%;
+					width: 100%;
 					position: relative;
 					top: 1px;
-				}
-			}
-
-			&:hover {
-				color: $white;
-
-				svg {
-					color: $highlight;
-					transform: translateX(5px);
 				}
 			}
 		}

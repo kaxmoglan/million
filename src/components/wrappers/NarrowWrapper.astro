@@ -1,0 +1,21 @@
+<div class="container">
+	<slot />
+</div>
+
+<style lang="scss">
+	@import '../../styles/responsive';
+
+	.container {
+		width: 650px;
+		margin-bottom: 3rem;
+
+		@include sm-screen {
+			width: 600px;
+			padding: 0 1rem;
+		}
+
+		@include xs-screen {
+			width: 100%;
+		}
+	}
+</style>

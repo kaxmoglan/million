@@ -1,10 +1,21 @@
+---
+export interface Props {
+	flexDirection?: 'column' | 'row';
+}
+
+const { flexDirection = 'row' } = Astro.props;
+---
+
 <div class="flex-wrapper">
 	<slot />
 </div>
 
-<style lang="scss">
+<style lang="scss" define:vars={{ flexDirection }}>
 	.flex-wrapper {
+		flex-direction: var(--flexDirection);
+		height: 100%;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 </style>

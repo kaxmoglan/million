@@ -1,0 +1,118 @@
+---
+interface Props {
+	title: string;
+	subtitle: string;
+	description: string;
+	buttonText?: string;
+}
+
+const {
+	title,
+	subtitle,
+	description,
+	buttonText = 'Get in touch',
+} = Astro.props;
+---
+
+<div class="card">
+	<div class="card__header">
+		<p class="card__header-title">{title}</p>
+		<p class="card__header-subtitle">{subtitle}</p>
+	</div>
+	<div class="card__content">
+		<div class="card__content-section">
+			<div class="card__content-description">
+				<p>{description}</p>
+			</div>
+		</div>
+		<div class="card__content-section">
+			<div class="card__content-section-title">
+				<p>What you get</p>
+			</div>
+			<div class="card__content-section-body">
+				<slot name="what-you-get" />
+			</div>
+		</div>
+		<div class="card__content-section">
+			<p class="card__content-section-title">What you pay</p>
+			<div class="card__content-section-body">
+				<slot name="what-you-pay" />
+			</div>
+		</div>
+	</div>
+	<div class="action-btn">
+		<a href="">
+			<p>{buttonText}</p>
+		</a>
+	</div>
+</div>
+
+<style lang="scss">
+	@import '../styles/colors.scss';
+
+	.action-btn {
+		width: 100%;
+		background-color: $highlightDark;
+		height: 45px;
+		margin: 2rem 0;
+		border-radius: 10px;
+
+		&:hover {
+			background-color: $highlight;
+		}
+		a {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $white;
+			text-decoration: none;
+			text-align: center;
+		}
+	}
+
+	.card {
+		width: 275px;
+
+		&__header {
+			margin-bottom: 2rem;
+			&-title {
+				font-size: 3rem;
+				font-weight: bold;
+				color: $grey3;
+				margin: 0;
+			}
+
+			&-subtitle {
+				font-size: 1rem;
+				font-weight: bold;
+				color: $grey1;
+			}
+		}
+
+		&__content {
+			display: grid;
+			grid-template-rows: 0.7fr 1.3fr 1fr;
+			gap: 1rem;
+
+			&-description {
+				font-size: 0.9rem;
+				color: $grey2;
+			}
+
+			&-section {
+				&-title {
+					font-size: 0.8rem;
+					font-weight: bold;
+					color: $grey1;
+				}
+
+				&-body {
+					font-size: 0.9rem;
+					color: $grey2;
+				}
+			}
+		}
+	}
+</style>

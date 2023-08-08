@@ -1,6 +1,7 @@
 ---
 import SectionHero from '../components/sections/SectionHero.astro';
 import SectionContent from '../components/sections/SectionContent.astro';
+import NarrowWrapper from '../components/wrappers/NarrowWrapper.astro';
 import Layout from '../layouts/Layout.astro';
 import Grey1 from '../components/SpanTextGrey1.astro';
 import { Form } from '../components/form/Form';
@@ -15,12 +16,12 @@ import ArrowLink from '../components/ArrowLink.astro';
 			<h2 class="text-grey1">
 				<span class="text-grey2">We</span> design,<br />build <span
 					class="text-grey2">&</span
-				> host<span class="text-highlight">.</span>
+				> host<span class="full-stop">.</span>
 			</h2>
 
-			<ArrowLink text="Learn More" link="" />
+			<ArrowLink text="Learn More" link="design" />
 
-			<div class="container">
+			<NarrowWrapper>
 				<p>
 					Here at <Grey1 text="Million" />, we take you <Grey1
 						text="end to end"
@@ -34,7 +35,7 @@ import ArrowLink from '../components/ArrowLink.astro';
 					then <Grey1 text="host" /> all the technology for you and offer
 					<Grey1 text="stress free support" /> and <Grey1 text="maintenance." />
 				</p>
-			</div>
+			</NarrowWrapper>
 
 			<h2 class="text-grey1">
 				<span class="text-grey2">We</span> write,<br />schedule & post<span
@@ -44,7 +45,7 @@ import ArrowLink from '../components/ArrowLink.astro';
 
 			<ArrowLink text="Learn More" link="" />
 
-			<div class="container">
+			<NarrowWrapper>
 				<p>
 					<Grey1
 						text="Photo captions, social media posts, website copy, blog posts and more."
@@ -54,7 +55,7 @@ import ArrowLink from '../components/ArrowLink.astro';
 						text="We have you covered"
 					/>, whatever your writing needs may be<span class="full-stop">.</span>
 				</p>
-			</div>
+			</NarrowWrapper>
 		</SectionContent>
 
 		<SectionContent title="Why Million?">
@@ -66,7 +67,7 @@ import ArrowLink from '../components/ArrowLink.astro';
 
 			<ArrowLink text="Learn More" link="" />
 
-			<div class="container">
+			<NarrowWrapper>
 				<p>
 					From <Grey1 text="local" /> businesses, to <Grey1
 						text="Fortune 500"
@@ -80,7 +81,7 @@ import ArrowLink from '../components/ArrowLink.astro';
 						class="full-stop">.</span
 					>
 				</p>
-			</div>
+			</NarrowWrapper>
 
 			<h2 class="text-grey1">
 				Fair and<br /><span id="transparent">transparent</span><br
@@ -89,14 +90,14 @@ import ArrowLink from '../components/ArrowLink.astro';
 
 			<ArrowLink text="Learn More" link="" />
 
-			<div class="container">
+			<NarrowWrapper>
 				<p>
 					<Grey1 text="We hate hidden costs" /> so we don't have any. Everything
 					is <Grey1 text="discussed and agreed with you upfront" />, we can work
 					to <Grey1 text="fixed budgets" /> and deadlines and we never ask for the
 					full fee up front<span class="full-stop">.</span>
 				</p>
-			</div>
+			</NarrowWrapper>
 
 			<h2 class="text-grey1">
 				<span class="text-grey2">We</span><br />go beyond<span
@@ -106,7 +107,7 @@ import ArrowLink from '../components/ArrowLink.astro';
 
 			<ArrowLink text="Learn More" link="" />
 
-			<div class="container">
+			<NarrowWrapper>
 				<p>
 					We pride ourselves on being <Grey1
 						text="one team for all your digital needs."
@@ -119,11 +120,11 @@ import ArrowLink from '../components/ArrowLink.astro';
 						class="full-stop">.</span
 					>
 				</p>
-			</div>
+			</NarrowWrapper>
 		</SectionContent>
 
 		<SectionContent title="Get In Touch">
-			<div class="container">
+			<NarrowWrapper>
 				<p>
 					For a <Grey1 text="free consultation" /> with <Grey1
 						text="no obligation,"
@@ -132,7 +133,7 @@ import ArrowLink from '../components/ArrowLink.astro';
 					>
 				</p>
 				<Form client:idle />
-			</div>
+			</NarrowWrapper>
 		</SectionContent>
 	</main>
 </Layout>
@@ -163,42 +164,27 @@ import ArrowLink from '../components/ArrowLink.astro';
 		}
 	}
 
-	.container {
-		width: 650px;
-		margin-bottom: 3rem;
+	p {
+		margin: 0 0 2.5rem 0;
+		text-align: center;
+		font-size: 1.6rem;
+		color: $grey3;
+		line-height: 2rem;
+		transition: all 500ms ease-in-out;
 
 		@include sm-screen {
-			width: 600px;
-			padding: 0 1rem;
+			font-size: 1.4rem;
+			line-height: normal;
 		}
 
 		@include xs-screen {
-			width: 100%;
+			font-size: 1rem;
 		}
 
-		p {
-			// font-weight: 300;
-			margin: 0 0 2.5rem 0;
-			text-align: center;
-			font-size: 1.6rem;
-			color: $grey3;
-			line-height: 2rem;
-			transition: all 500ms ease-in-out;
-
-			@include sm-screen {
-				font-size: 1.4rem;
-				line-height: normal;
-			}
-
-			@include xs-screen {
-				font-size: 1rem;
-			}
-
-			.full-stop {
-				color: $highlight;
-				font-weight: bold;
-				padding-left: 0.2rem;
-			}
+		.full-stop {
+			color: $highlight;
+			font-weight: bold;
+			padding-left: 0.2rem;
 		}
 	}
 

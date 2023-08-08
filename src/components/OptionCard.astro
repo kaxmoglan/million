@@ -6,12 +6,7 @@ interface Props {
 	buttonText?: string;
 }
 
-const {
-	title,
-	subtitle,
-	description,
-	buttonText = 'Get in touch',
-} = Astro.props;
+const { title, subtitle, description, buttonText = 'Select' } = Astro.props;
 ---
 
 <div class="card">
@@ -49,6 +44,7 @@ const {
 
 <style lang="scss">
 	@import '../styles/colors.scss';
+	@import '../styles/responsive.scss';
 
 	.action-btn {
 		width: 100%;
@@ -95,6 +91,12 @@ const {
 			display: grid;
 			grid-template-rows: 0.7fr 1.3fr 1fr;
 			gap: 1rem;
+
+			@include xs-screen {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+			}
 
 			&-description {
 				font-size: 0.9rem;

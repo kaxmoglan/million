@@ -1,0 +1,72 @@
+---
+import { Icon } from 'astro-icon';
+
+interface Props {
+	targetId: string;
+}
+
+const { targetId } = Astro.props;
+---
+
+<see-more data-target-id={targetId}>
+	<p>See more</p>
+	<div class="caret-container">
+		<Icon name="caret" />
+	</div>
+</see-more>
+
+<script>
+	customElements.define(
+		`see-more`,
+		class extends HTMLElement {
+			public constructor() {
+				super();
+				this.addEventListener(`click`, this.scrollDown);
+			}
+
+			private scrollDown() {
+				if (!this.dataset.targetId)
+					return void console.error(`No targetId provided`);
+				document
+					.getElementById(this.dataset.targetId)
+					?.scrollIntoView({ behavior: `smooth` });
+			}
+		}
+	);
+</script>
+
+<style lang="scss">
+	@import '../styles/colors.scss';
+
+	see-more {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin-bottom: 5vh;
+		text-align: center;
+		user-select: none;
+		cursor: pointer;
+
+		p {
+			color: $grey3;
+			margin: 0.5rem;
+		}
+
+		svg {
+			color: $grey3;
+			height: 20px;
+			transform: rotate(90deg);
+		}
+
+		&:hover {
+			p {
+				color: $grey2;
+			}
+			svg {
+				color: $highlight;
+				transform: translateY(4px) rotate(90deg);
+			}
+		}
+	}
+</style>

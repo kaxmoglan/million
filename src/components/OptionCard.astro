@@ -4,11 +4,19 @@ interface Props {
 	title: string;
 	subtitle: string;
 	description: string;
+	gridTemplateRows: string;
 	buttonText?: string;
 	id?: OptionCardId;
 }
 
-const { title, subtitle, description, buttonText = 'Select', id } = Astro.props;
+const {
+	title,
+	subtitle,
+	description,
+	buttonText = 'Select',
+	id,
+	gridTemplateRows,
+} = Astro.props;
 ---
 
 <div class="card">
@@ -44,7 +52,7 @@ const { title, subtitle, description, buttonText = 'Select', id } = Astro.props;
 	</div>
 </div>
 
-<style lang="scss">
+<style lang="scss" define:vars={{ gridTemplateRows }}>
 	@import '../styles/colors.scss';
 	@import '../styles/responsive.scss';
 
@@ -90,11 +98,13 @@ const { title, subtitle, description, buttonText = 'Select', id } = Astro.props;
 		}
 
 		&__content {
+			height: 435px;
 			display: grid;
-			grid-template-rows: 0.7fr 1.3fr 1fr;
+			grid-template-rows: var(--gridTemplateRows);
 			gap: 1rem;
 
 			@include md-screen {
+				height: initial;
 				display: flex;
 				flex-direction: column;
 				gap: 2rem;

@@ -5,9 +5,11 @@ let existingUrlSubject: string | null = null;
 let subject: string | null = null;
 
 const handleSubject = () => {
-	const urlParams = new URLSearchParams(window.location.search);
+	const url = window.location;
+	if (!url.href.includes('/contact')) return;
+
+	const urlParams = new URLSearchParams(url.search);
 	const newUrlSubject = urlParams.get('selected-option');
-	console.log({ newUrlSubject });
 
 	const hasUrlSubjectChanged = newUrlSubject !== existingUrlSubject;
 

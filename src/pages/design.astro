@@ -6,6 +6,7 @@ import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
 import OptionCardsWrapper from '../components/wrappers/OptionCardsWrapper.astro';
 import OptionCard from '../components/OptionCard.astro';
 import SeeMore from '../components/SeeMore.astro';
+import { OptionCardId } from '../utils/optionCardUtils';
 ---
 
 <Layout title="Million Digital - Design">
@@ -18,11 +19,9 @@ import SeeMore from '../components/SeeMore.astro';
 						Great design is at the heart of great businesses. Our team creates
 						modern and user friendly websites, apps, landing pages, HTML email
 						templates and branding with a focus on UX, SEO and, most
-						importantly, you and your customers.
-						<br />
-						<br />
-						We have a 3-step process that means you only ever pay for the work you
-						ask for.
+						importantly, you and your customers.<br />
+						<br />We have a 3-step process that means you only ever pay for the
+						work you ask for.
 					</h3>
 				</FlexWrapper>
 			</NarrowWrapper>
@@ -33,6 +32,7 @@ import SeeMore from '../components/SeeMore.astro';
 			<OptionCard
 				title="Step 1"
 				subtitle="Concept"
+				id={OptionCardId.DESIGN_CONCEPT}
 				description="You tell us what you’re looking for and give us your brief. This can be as vague or as detailed as you’d like."
 			>
 				<div slot="what-you-get">
@@ -48,6 +48,7 @@ import SeeMore from '../components/SeeMore.astro';
 			<OptionCard
 				title="Step 2"
 				subtitle="Prototype"
+				id={OptionCardId.DESIGN_PROTOTYPE}
 				description="Pick one of our concepts and we'll refine your favourite design."
 			>
 				<div slot="what-you-get">
@@ -63,6 +64,7 @@ import SeeMore from '../components/SeeMore.astro';
 			<OptionCard
 				title="Step 3"
 				subtitle="Delivery"
+				id={OptionCardId.DESIGN_DELIVERY}
 				description="Once you're happy with the prototype, we finalise your design and give you all the deliverables."
 			>
 				<div slot="what-you-get">
@@ -83,19 +85,19 @@ import SeeMore from '../components/SeeMore.astro';
 	</main>
 
 	<FullScreenWrapper />
-
-	<style lang="scss">
-		@import '../styles/colors.scss';
-
-		h1 {
-			font-size: 8rem;
-		}
-
-		h3 {
-			color: $grey2;
-			text-align: center;
-			font-weight: normal;
-			line-height: 1.6rem;
-		}
-	</style>
 </Layout>
+
+<style lang="scss">
+	@import '../styles/colors.scss';
+
+	h1 {
+		font-size: 8rem;
+	}
+
+	h3 {
+		color: $grey2;
+		text-align: center;
+		font-weight: normal;
+		line-height: 1.6rem;
+	}
+</style>

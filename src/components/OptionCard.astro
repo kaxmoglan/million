@@ -1,12 +1,14 @@
 ---
+import type { OptionCardId } from '../utils/optionCardUtils';
 interface Props {
 	title: string;
 	subtitle: string;
 	description: string;
 	buttonText?: string;
+	id?: OptionCardId;
 }
 
-const { title, subtitle, description, buttonText = 'Select' } = Astro.props;
+const { title, subtitle, description, buttonText = 'Select', id } = Astro.props;
 ---
 
 <div class="card">
@@ -35,8 +37,8 @@ const { title, subtitle, description, buttonText = 'Select' } = Astro.props;
 			</div>
 		</div>
 	</div>
-	<div class="action-btn">
-		<a href="">
+	<div id={id} class="action-btn">
+		<a href={`contact?selected-option=${id}`}>
 			<p>{buttonText}</p>
 		</a>
 	</div>

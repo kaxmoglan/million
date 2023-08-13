@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FullScreenWrapper from '../components/wrappers/FullScreenWrapper.astro';
+import NarrowWrapper from '../components/wrappers/NarrowWrapper.astro';
+import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
+import OptionCardsWrapper from '../components/wrappers/OptionCardsWrapper.astro';
+import OptionCard from '../components/OptionCard.astro';
+import SeeMore from '../components/SeeMore.astro';
+import { OptionCardId } from '../utils/optionCardUtils';
+
+const gridTemplateRows = '4fr 1fr';
+---
+
+<Layout title="Million Digital - Host">
+	<main>
+		<FullScreenWrapper>
+			<NarrowWrapper>
+				<FlexWrapper flexDirection="column" className="page__header">
+					<h1>host<span class="full-stop">.</span></h1>
+					<h3 class="page__heading">
+						Hosting is simple when done the Million way. When you host with us,
+						we handle everything for you.
+						<br />
+						<br />
+						This means:
+						<br />
+						<br />
+						<ul>
+							<li>✔ Fully managed</li>
+							<li>✔ Pay only for what you need and use</li>
+							<li>✔ No complicated interfaces or language</li>
+							<li>✔ Help to set up your emails on all your devices</li>
+							<li>✔ Environmentally conscious</li>
+							<li>✔ Daily and weekly backups</li>
+							<li>✔ 99.96% uptime</li>
+						</ul>
+					</h3>
+				</FlexWrapper>
+			</NarrowWrapper>
+			<SeeMore targetId="option-cards" />
+		</FullScreenWrapper>
+
+		<OptionCardsWrapper id="option-cards">
+			<OptionCard
+				title="Start up"
+				subtitle="For small businesses"
+				id={OptionCardId.HOST_START_UP}
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>- Up to 10 email addresses synced across all your devices</li>
+						<li>- 1 year free domain</li>
+						<li>- SSL certificate</li>
+						<li>- DDOS protection</li>
+						<li>- 99.9% uptime guarantee</li>
+						<li>- Up to 5 subdomains</li>
+						<li>- Daily and weekly backups</li>
+						<li>- Managed Wordpress hosting</li>
+						<li>- Up to 2,000 users per month</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £19.99 per month</p>
+				</div>
+			</OptionCard>
+
+			<OptionCard
+				title="Scale up"
+				subtitle="For growing businesses"
+				id={OptionCardId.HOST_SCALE_UP}
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>- Everything in start up</li>
+						<li>- Up to 100 email addresses synced across all your devices</li>
+						<li>- Up to 100 subdomains</li>
+						<li>- Custom server hosting</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £49.99 per month</p>
+				</div>
+			</OptionCard>
+
+			<OptionCard
+				title="Bespoke"
+				subtitle="For something truly custom"
+				id={OptionCardId.HOST_BESPOKE}
+				description="For businesses that require something larger or more complex, get in touch to discuss your requirements."
+				showWhatYouGet={false}
+				showWhatYouPay={false}
+				gridTemplateRows={gridTemplateRows}
+			/>
+		</OptionCardsWrapper>
+	</main>
+
+	<FullScreenWrapper />
+</Layout>

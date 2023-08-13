@@ -1,12 +1,13 @@
 ---
 export interface Props {
 	flexDirection?: 'column' | 'row';
+	className?: string;
 }
 
-const { flexDirection = 'row' } = Astro.props;
+const { flexDirection = 'row', className } = Astro.props;
 ---
 
-<div class="flex-wrapper">
+<div class={`flex-wrapper ${className}`}>
 	<slot />
 </div>
 

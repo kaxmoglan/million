@@ -15,7 +15,7 @@ const gridTemplateRows = '2fr 3fr 1fr';
 	<main>
 		<FullScreenWrapper>
 			<NarrowWrapper>
-				<FlexWrapper flexDirection="column">
+				<FlexWrapper flexDirection="column" className="page__header">
 					<h1>build<span class="full-stop">.</span></h1>
 					<h3>
 						Our team of developers bring your design to life and then some. Our
@@ -97,18 +97,3 @@ const gridTemplateRows = '2fr 3fr 1fr';
 
 	<FullScreenWrapper />
 </Layout>
-
-<style lang="scss">
-	@import '../styles/colors.scss';
-
-	h1 {
-		font-size: 8rem;
-	}
-
-	h3 {
-		color: $grey2;
-		text-align: center;
-		font-weight: normal;
-		line-height: 1.6rem;
-	}
-</style>

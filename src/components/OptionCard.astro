@@ -3,10 +3,12 @@ import type { OptionCardId } from '../utils/optionCardUtils';
 interface Props {
 	title: string;
 	subtitle: string;
-	description: string;
+	description?: string;
 	gridTemplateRows: string;
 	buttonText?: string;
 	id?: OptionCardId;
+	showWhatYouGet?: boolean;
+	showWhatYouPay?: boolean;
 }
 
 const {
@@ -16,6 +18,8 @@ const {
 	buttonText = 'Select',
 	id,
 	gridTemplateRows,
+	showWhatYouGet = true,
+	showWhatYouPay = true,
 } = Astro.props;
 ---
 
@@ -25,25 +29,37 @@ const {
 		<p class="card__header-subtitle">{subtitle}</p>
 	</div>
 	<div class="card__content">
-		<div class="card__content-section">
-			<div class="card__content-description">
-				<p>{description}</p>
-			</div>
-		</div>
-		<div class="card__content-section">
-			<div class="card__content-section-title">
-				<p>What you get</p>
-			</div>
-			<div class="card__content-section-body">
-				<slot name="what-you-get" />
-			</div>
-		</div>
-		<div class="card__content-section">
-			<p class="card__content-section-title">What you pay</p>
-			<div class="card__content-section-body">
-				<slot name="what-you-pay" />
-			</div>
-		</div>
+		{
+			description && (
+				<div class="card__content-section">
+					<div class="card__content-description">
+						<p>{description}</p>
+					</div>
+				</div>
+			)
+		}
+		{
+			showWhatYouGet && (
+				<div class="card__content-section">
+					<div class="card__content-section-title">
+						<p>What you get</p>
+					</div>
+					<div class="card__content-section-body">
+						<slot name="what-you-get" />
+					</div>
+				</div>
+			)
+		}
+		{
+			showWhatYouPay && (
+				<div class="card__content-section">
+					<p class="card__content-section-title">What you pay</p>
+					<div class="card__content-section-body">
+						<slot name="what-you-pay" />
+					</div>
+				</div>
+			)
+		}
 	</div>
 	<div id={id} class="action-btn">
 		<a href={`contact?selected-option=${id}`}>

@@ -2,23 +2,23 @@
 interface Props {
 	text: string;
 	href: string;
+	fullWidth?: boolean;
 	id?: string;
 }
 
-const { id, text, href } = Astro.props;
+const { id, text, href, fullWidth = true } = Astro.props;
 ---
 
-<div id={id} class="action-btn">
+<div id={id} class="action-btn" style={{ width: fullWidth ? '100%' : '185px' }}>
 	<a href={href}>
 		<p>{text}</p>
 	</a>
 </div>
 
-<style lang="scss">
+<style lang="scss" }>
 	@import '../styles/colors.scss';
 
 	.action-btn {
-		width: 100%;
 		background-color: $highlightDark;
 		height: 45px;
 		margin: 2rem 0;

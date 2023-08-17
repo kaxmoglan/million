@@ -8,6 +8,9 @@ export enum OptionCardId {
 	HOST_START_UP = 'host-start-up',
 	HOST_SCALE_UP = 'host-scale-up',
 	HOST_BESPOKE = 'host-bespoke',
+	BEYOND_ADVERTISING = 'advertising',
+	BEYOND_VIDEO_EDITING = 'video-editing',
+	BEYOND_PHOTO_EDITING = 'photo-editing',
 }
 
 export const getFormSubject = (buttonId: OptionCardId): string => {
@@ -31,13 +34,22 @@ export const getFormSubject = (buttonId: OptionCardId): string => {
 			return `Native App Building Enquiry`;
 
 		case OptionCardId.HOST_START_UP:
-			return `Start Up Hosting Package`;
+			return `Start Up Hosting Package Enquiry`;
 
 		case OptionCardId.HOST_SCALE_UP:
-			return `Scale Up Hosting Package`;
+			return `Scale Up Hosting Package Enquiry`;
 
 		case OptionCardId.HOST_BESPOKE:
-			return `Bespoke Hosting`;
+			return `Bespoke Hosting Enquiry`;
+
+		case OptionCardId.BEYOND_ADVERTISING:
+			return `Advertising Enquiry`;
+
+		case OptionCardId.BEYOND_VIDEO_EDITING:
+			return `Video Editing Enquiry`;
+
+		case OptionCardId.BEYOND_PHOTO_EDITING:
+			return `Photo Editing Enquiry`;
 
 		default:
 			throw new Error('Unknown OptionCardId');

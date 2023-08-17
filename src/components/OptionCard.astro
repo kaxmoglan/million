@@ -11,6 +11,7 @@ interface Props {
 	id?: OptionCardId;
 	showWhatYouGet?: boolean;
 	showWhatYouPay?: boolean;
+	titleSize?: string;
 }
 
 const {
@@ -22,6 +23,7 @@ const {
 	gridTemplateRows,
 	showWhatYouGet = true,
 	showWhatYouPay = true,
+	titleSize = '3rem',
 } = Astro.props;
 ---
 
@@ -70,7 +72,7 @@ const {
 	/>
 </div>
 
-<style lang="scss" define:vars={{ gridTemplateRows }}>
+<style lang="scss" define:vars={{ gridTemplateRows, titleSize }}>
 	@import '../styles/colors.scss';
 	@import '../styles/responsive.scss';
 
@@ -80,7 +82,7 @@ const {
 		&__header {
 			margin-bottom: 2rem;
 			&-title {
-				font-size: 3rem;
+				font-size: var(--titleSize);
 				font-weight: bold;
 				color: $grey3;
 				margin: 0;

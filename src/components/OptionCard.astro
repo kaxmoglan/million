@@ -1,5 +1,7 @@
 ---
 import type { OptionCardId } from '../utils/optionCardUtils';
+import ActionButton from './ActionButton.astro';
+
 interface Props {
 	title: string;
 	subtitle: string;
@@ -61,38 +63,16 @@ const {
 			)
 		}
 	</div>
-	<div id={id} class="action-btn">
-		<a href={`contact?selected-option=${id}`}>
-			<p>{buttonText}</p>
-		</a>
-	</div>
+	<ActionButton
+		text={buttonText}
+		href={`contact?selected-option=${id}`}
+		id={id}
+	/>
 </div>
 
 <style lang="scss" define:vars={{ gridTemplateRows }}>
 	@import '../styles/colors.scss';
 	@import '../styles/responsive.scss';
-
-	.action-btn {
-		width: 100%;
-		background-color: $highlightDark;
-		height: 45px;
-		margin: 2rem 0;
-		border-radius: 10px;
-
-		&:hover {
-			background-color: $highlight;
-		}
-		a {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: $white;
-			text-decoration: none;
-			text-align: center;
-		}
-	}
 
 	.card {
 		width: 275px;

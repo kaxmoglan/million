@@ -1,8 +1,15 @@
 @import './colors.scss';
+@import './responsive.scss';
 
 .page__header {
+	padding: 2rem;
+
 	h1 {
 		font-size: 8rem;
+
+		@include xs-screen {
+			font-size: 6rem;
+		}
 	}
 
 	h3 {
@@ -10,6 +17,10 @@
 		text-align: center;
 		font-weight: normal;
 		line-height: 1.6rem;
+
+		@include sm-screen {
+			font-size: 1rem;
+		}
 	}
 
 	ul {

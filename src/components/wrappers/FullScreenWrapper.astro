@@ -3,11 +3,18 @@
 </div>
 
 <style lang="scss">
+	@import '../../styles/responsive.scss';
 	.full-screen-wrapper {
 		position: relative;
 		min-height: 100vh;
-		width: 100vw;
+		width: 100%;
 		display: flex;
 		justify-content: center;
+		align-items: center;
+
+		@include xs-screen {
+			padding: 4rem 2rem 0 2rem;
+			align-items: flex-start;
+		}
 	}
 </style>

@@ -20,11 +20,9 @@ const gridTemplateRows = '4fr 1fr';
 					<h3 class="page__heading">
 						Hosting is simple when done the Million way. When you host with us,
 						we handle everything for you.
-						<br />
-						<br />
-						This means:
-						<br />
-						<br />
+					</h3>
+					<div class="checklist-container">
+						<p>This means:</p>
 						<ul>
 							<li>✔ Fully managed</li>
 							<li>✔ Pay only for what you need and use</li>
@@ -34,7 +32,7 @@ const gridTemplateRows = '4fr 1fr';
 							<li>✔ Daily and weekly backups</li>
 							<li>✔ 99.96% uptime</li>
 						</ul>
-					</h3>
+					</div>
 				</FlexWrapper>
 			</NarrowWrapper>
 			<SeeMore targetId="option-cards" />
@@ -98,3 +96,25 @@ const gridTemplateRows = '4fr 1fr';
 
 	<FullScreenWrapper />
 </Layout>
+
+<style lang="scss">
+	@import '../styles/responsive.scss';
+	.checklist-container {
+		text-align: center;
+		font-size: 1rem;
+
+		@include xs-screen {
+			font-size: 0.8rem;
+		}
+
+		ul {
+			li {
+				font-size: 1rem;
+
+				@include xs-screen {
+					font-size: 0.8rem;
+				}
+			}
+		}
+	}
+</style>

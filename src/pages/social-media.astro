@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FullScreenWrapper from '../components/wrappers/FullScreenWrapper.astro';
+import OptionCardsWrapper from '../components/wrappers/OptionCardsWrapper.astro';
+import OptionCard from '../components/OptionCard.astro';
+import SeeMore from '../components/SeeMore.astro';
+import { OptionCardId } from '../utils/optionCardUtils';
+
+const gridTemplateRows = '3fr 2.5fr 1fr';
+const titleSize = '2.5rem';
+---
+
+<Layout title="Million Digital - Beyond">
+	<main>
+		<FullScreenWrapper>
+			<div class="page__header">
+				<h1 id="social-media-title">
+					write<span class="full-stop">.</span>
+					<br />
+					schedule<span class="full-stop">.</span>
+					<br />
+					post<span class="full-stop">.</span>
+				</h1>
+				<h3 id="social-media-subtitle">
+					Social media management and creating effective online content is
+					simple with Million. We can write anything from captions and comment
+					replies, to entire blog posts, slogans and marketing campaigns.
+				</h3>
+			</div>
+			<SeeMore targetId="option-cards" />
+		</FullScreenWrapper>
+
+		<OptionCardsWrapper id="option-cards">
+			<OptionCard
+				title="Advertising"
+				titleSize={titleSize}
+				subtitle="Set a budget. Let it rip."
+				id={OptionCardId.BEYOND_ADVERTISING}
+				description="Set a fixed monthly budget and watch your engagement and sales soar."
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>- Initial consultation</li>
+						<li>- Full campaign plan</li>
+						<li>- Actively managed campaign</li>
+						<li>- Monthly reports</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £799 per month</p>
+				</div>
+			</OptionCard>
+
+			<OptionCard
+				title="Video Editing"
+				titleSize={titleSize}
+				subtitle="Pro motion engagement."
+				id={OptionCardId.BEYOND_VIDEO_EDITING}
+				description="Good video editing is the difference between a watched video and a skipped one. Engage new and existing customers like never before with professionally edited videos delivered in the proper formats and resolution for every platform you’re customers are on."
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>
+							- Edited video files in the perfect size and quality for all your
+							social platforms.
+						</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £299</p>
+				</div>
+			</OptionCard>
+
+			<OptionCard
+				title="Photo Editing"
+				titleSize={titleSize}
+				subtitle="Your custom filter."
+				id={OptionCardId.BEYOND_PHOTO_EDITING}
+				description="Remove unwanted objects, add text, lighten, darken, effects and more. We can work on a single photo or help you create your own style across a series of photographs."
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>- Edited photos in full size resolution</li>
+						<li>- Edited photos in web-ready size and format</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £9,999</p>
+				</div>
+			</OptionCard>
+		</OptionCardsWrapper>
+	</main>
+</Layout>
+
+<style lang="scss">
+	@import '../styles/responsive.scss';
+
+	.page__header {
+		flex-direction: row;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5rem;
+		padding: 0 5rem 5rem 5rem;
+
+		@include md-screen {
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		@include sm-screen {
+			padding: 2rem;
+		}
+
+		@include xs-screen {
+			padding: 0;
+		}
+	}
+
+	#social-media-title {
+		font-size: 6rem;
+		text-align: left;
+
+		@include lg-screen {
+			font-size: 4.8rem;
+		}
+
+		@include md-screen {
+			text-align: center;
+		}
+
+		@include sm-screen {
+			font-size: 4rem;
+		}
+
+		@include xs-screen {
+			font-size: 3.5rem;
+		}
+	}
+
+	#social-media-subtitle {
+		text-align: right;
+
+		@include md-screen {
+			text-align: center;
+		}
+
+		@include sm-screen {
+			font-size: 1rem;
+		}
+	}
+</style>

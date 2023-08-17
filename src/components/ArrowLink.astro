@@ -19,7 +19,8 @@ const { link, text } = Astro.props;
 </div>
 
 <style lang="scss">
-	@import '../styles/colors';
+	@import '../styles/colors.scss';
+	@import '../styles/responsive.scss';
 
 	.container {
 		margin: 1rem 0 2rem 0;
@@ -43,6 +44,10 @@ const { link, text } = Astro.props;
 
 			p {
 				margin: 0;
+
+				@include xs-screen {
+					font-size: 1rem;
+				}
 			}
 
 			.caret-container {

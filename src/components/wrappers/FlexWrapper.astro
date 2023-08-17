@@ -2,21 +2,25 @@
 export interface Props {
 	flexDirection?: 'column' | 'row';
 	className?: string;
+	gap?: string;
+	padding?: string;
 }
 
-const { flexDirection = 'row', className } = Astro.props;
+const { flexDirection = 'row', className, gap, padding } = Astro.props;
 ---
 
 <div class={`flex-wrapper ${className}`}>
 	<slot />
 </div>
 
-<style lang="scss" define:vars={{ flexDirection }}>
+<style lang="scss" define:vars={{ flexDirection, gap, padding }}>
 	.flex-wrapper {
 		flex-direction: var(--flexDirection);
 		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		gap: var(--gap);
+		padding: var(--padding);
 	}
 </style>

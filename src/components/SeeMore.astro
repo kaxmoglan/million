@@ -37,16 +37,22 @@ const { targetId } = Astro.props;
 
 <style lang="scss">
 	@import '../styles/colors.scss';
+	@import '../styles/responsive.scss';
 
 	see-more {
 		position: absolute;
-		bottom: 0;
+		bottom: 1rem;
 		left: 0;
 		right: 0;
 		margin-bottom: 5vh;
 		text-align: center;
 		user-select: none;
 		cursor: pointer;
+
+		@include xs-screen {
+			bottom: 0;
+			margin-bottom: 1rem;
+		}
 
 		p {
 			color: $grey3;

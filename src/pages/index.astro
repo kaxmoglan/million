@@ -4,8 +4,8 @@ import SectionContent from '../components/sections/SectionContent.astro';
 import NarrowWrapper from '../components/wrappers/NarrowWrapper.astro';
 import Layout from '../layouts/Layout.astro';
 import Grey1 from '../components/SpanTextGrey1.astro';
-import { Form } from '../components/form/Form';
 import ArrowLink from '../components/ArrowLink.astro';
+import ActionButton from '../components/ActionButton.astro';
 ---
 
 <Layout title="Million">
@@ -121,17 +121,32 @@ import ArrowLink from '../components/ArrowLink.astro';
 			</NarrowWrapper>
 		</SectionContent>
 
-		<SectionContent title="Get In Touch">
+		<SectionContent title="Want it all and more?">
+			<h2 class="text-grey1">
+				What if<br />our team was<br />your team<span class="text-highlight"
+					>?</span
+				>
+			</h2>
+
+			<ArrowLink text="Learn More" link="subscription" />
+
 			<NarrowWrapper>
 				<p>
-					For a <Grey1 text="free consultation" /> with <Grey1
-						text="no obligation,"
-					/> get in touch and <Grey1 text="tell us about your project" /><span
-						class="full-stop">.</span
+					Here at Million, we offer our <Grey1 text="whole team" /> and <Grey1
+						text="all our services"
+					/> with <Grey1 text="unlimited requests" /> with
+					<Grey1 text="priority support" /> for a <Grey1
+						text="fixed monthly fee."
+					/>
+				</p>
+				<p>
+					<Grey1 text="Yes, you read that correctly" /><span class="full-stop"
+						>.</span
 					>
 				</p>
-				<Form client:idle />
 			</NarrowWrapper>
+
+			<ActionButton text="Get in touch" href="contact" fullWidth={false} />
 		</SectionContent>
 	</main>
 </Layout>

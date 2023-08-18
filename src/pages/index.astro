@@ -6,6 +6,7 @@ import Layout from '../layouts/Layout.astro';
 import Grey1 from '../components/SpanTextGrey1.astro';
 import ArrowLink from '../components/ArrowLink.astro';
 import ActionButton from '../components/ActionButton.astro';
+import ScrollToTop from '../components/ScrollToTop.astro';
 ---
 
 <Layout title="Million">
@@ -148,6 +149,8 @@ import ActionButton from '../components/ActionButton.astro';
 
 			<ActionButton text="Get in touch" href="contact" fullWidth={false} />
 		</SectionContent>
+
+		<ScrollToTop targetId="hero-section" />
 	</main>
 </Layout>
 

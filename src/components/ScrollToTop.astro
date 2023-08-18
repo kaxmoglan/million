@@ -8,23 +8,23 @@ interface Props {
 const { targetId } = Astro.props;
 ---
 
-<see-more data-target-id={targetId}>
-	<p>See More</p>
+<scroll-to-top data-target-id={targetId}>
 	<div class="caret-container">
 		<Icon name="caret" />
 	</div>
-</see-more>
+	<p>Back to Top</p>
+</scroll-to-top>
 
 <script>
 	customElements.define(
-		`see-more`,
+		`scroll-to-top`,
 		class extends HTMLElement {
 			public constructor() {
 				super();
-				this.addEventListener(`click`, this.scrollDown);
+				this.addEventListener(`click`, this.scrollUp);
 			}
 
-			private scrollDown() {
+			private scrollUp() {
 				if (!this.dataset.targetId)
 					return void console.error(`No targetId provided`);
 				document
@@ -38,12 +38,8 @@ const { targetId } = Astro.props;
 <style lang="scss">
 	@import '../styles/main';
 
-	see-more {
-		position: absolute;
-		bottom: 1rem;
-		left: 0;
-		right: 0;
-		margin-bottom: 5vh;
+	scroll-to-top {
+		// margin-bottom: 5vh;
 		text-align: center;
 		user-select: none;
 		cursor: pointer;
@@ -61,7 +57,7 @@ const { targetId } = Astro.props;
 		svg {
 			color: $grey3;
 			height: 20px;
-			transform: rotate(90deg);
+			transform: rotate(-90deg);
 		}
 
 		&:hover {
@@ -70,7 +66,7 @@ const { targetId } = Astro.props;
 			}
 			svg {
 				color: $highlight;
-				transform: translateY(4px) rotate(90deg);
+				transform: translateY(-4px) rotate(-90deg);
 			}
 		}
 	}

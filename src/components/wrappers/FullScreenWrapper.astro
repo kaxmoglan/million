@@ -1,4 +1,12 @@
-<div class="full-screen-wrapper">
+---
+interface Props {
+	id?: string;
+}
+
+const { id } = Astro.props;
+---
+
+<div id={id} class="full-screen-wrapper">
 	<slot />
 </div>
 

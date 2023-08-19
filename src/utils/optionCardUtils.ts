@@ -11,6 +11,9 @@ export enum OptionCardId {
 	BEYOND_ADVERTISING = 'advertising',
 	BEYOND_VIDEO_EDITING = 'video-editing',
 	BEYOND_PHOTO_EDITING = 'photo-editing',
+	SUBSCRIBE_QUARTER = 'subscribe-quarter',
+	SUBSCRIBE_BIANNUAL = 'subscribe-biannual',
+	SUBSCRIBE_ANNUAL = 'subscribe-annual',
 }
 
 export const getFormSubject = (buttonId: OptionCardId): string => {
@@ -50,6 +53,15 @@ export const getFormSubject = (buttonId: OptionCardId): string => {
 
 		case OptionCardId.BEYOND_PHOTO_EDITING:
 			return `Photo Editing Enquiry`;
+
+		case OptionCardId.SUBSCRIBE_QUARTER:
+			return `Quarterly Subscription Enquiry`;
+
+		case OptionCardId.SUBSCRIBE_BIANNUAL:
+			return `Biannual Subscription Enquiry`;
+
+		case OptionCardId.SUBSCRIBE_ANNUAL:
+			return `Annual Subscription Enquiry`;
 
 		default:
 			throw new Error('Unknown OptionCardId');

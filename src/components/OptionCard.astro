@@ -9,6 +9,7 @@ interface Props {
 	gridTemplateRows: string;
 	buttonText?: string;
 	id?: OptionCardId;
+	contentHeight?: string;
 	showWhatYouGet?: boolean;
 	showWhatYouPay?: boolean;
 	titleSize?: string;
@@ -24,6 +25,7 @@ const {
 	showWhatYouGet = true,
 	showWhatYouPay = true,
 	titleSize = '3rem',
+	contentHeight = '435px',
 } = Astro.props;
 ---
 
@@ -72,7 +74,7 @@ const {
 	/>
 </div>
 
-<style lang="scss" define:vars={{ gridTemplateRows, titleSize }}>
+<style lang="scss" define:vars={{ gridTemplateRows, titleSize, contentHeight }}>
 	@import '../styles/main';
 
 	.card {
@@ -95,7 +97,7 @@ const {
 		}
 
 		&__content {
-			height: 435px;
+			height: var(--contentHeight);
 			display: grid;
 			grid-template-rows: var(--gridTemplateRows);
 			gap: 1rem;

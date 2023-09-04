@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FullScreenWrapper from '../components/wrappers/FullScreenWrapper.astro';
+import OptionCardsWrapper from '../components/wrappers/OptionCardsWrapper.astro';
+import OptionCard from '../components/OptionCard.astro';
+import SeeMore from '../components/SeeMore.astro';
+import { OptionCardId } from '../utils/optionCardUtils';
+import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
+import NarrowWrapper from '../components/wrappers/NarrowWrapper.astro';
+
+const gridTemplateRows = '2fr 1fr';
+const titleSize = '2.5rem';
+const optionCardContentHeight = '250px';
+---
+
+<Layout title="Million Digital - Write">
+	<main>
+		<FullScreenWrapper>
+			<NarrowWrapper>
+				<FlexWrapper flexDirection="column" className="page__header">
+					<h1>write<span class="full-stop">.</span></h1>
+					<h3>
+						Creating effective online content is simple with Million. We can
+						write anything from photo captions, status updates, tweets and
+						comment replies, to managing an entire blog and creating all your
+						marketing content for you.
+					</h3>
+				</FlexWrapper>
+			</NarrowWrapper>
+			<SeeMore targetId="option-cards" />
+		</FullScreenWrapper>
+
+		<OptionCardsWrapper id="option-cards">
+			<OptionCard
+				title="Caption"
+				titleSize={titleSize}
+				subtitle="Grab with a headline."
+				id={OptionCardId.WRITING_CAPTION}
+				description="Our writers can create captions, status updates, tweets and more, all designed to increase user engagement and generate new leads."
+				showWhatYouGet={false}
+				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
+			>
+				<div slot="what-you-pay">
+					<p>From £799 per month</p>
+				</div>
+			</OptionCard>
+
+			<OptionCard
+				title="Article"
+				titleSize={titleSize}
+				subtitle="Engage with a story."
+				id={OptionCardId.WRITING_ARTICLE}
+				description="One-off articles or a series of posts designed to engage new and existing customers with your brand story."
+				showWhatYouGet={false}
+				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
+			>
+				<div slot="what-you-pay">
+					<p>From £299</p>
+				</div>
+			</OptionCard>
+
+			<OptionCard
+				title="Content"
+				titleSize={titleSize}
+				subtitle="Full marketing content."
+				id={OptionCardId.WRITING_CONTENT}
+				description="Effective marketing content in your brand’s voice."
+				showWhatYouGet={false}
+				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
+			>
+				<div slot="what-you-pay">
+					<p>From £9,999</p>
+				</div>
+			</OptionCard>
+		</OptionCardsWrapper>
+	</main>
+</Layout>

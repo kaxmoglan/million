@@ -1,4 +1,4 @@
-export enum OptionCardId {
+export enum OptionId {
 	DESIGN_CONCEPT = 'design-concept',
 	DESIGN_PROTOTYPE = 'design-prototype',
 	DESIGN_DELIVERY = 'design-delivery',
@@ -16,51 +16,51 @@ export enum OptionCardId {
 	WRITING_CONTENT = 'writing-content',
 }
 
-export const getFormSubject = (buttonId: OptionCardId): string => {
+export const getFormSubject = (buttonId: OptionId): string => {
 	switch (buttonId) {
-		case OptionCardId.DESIGN_CONCEPT:
+		case OptionId.DESIGN_CONCEPT:
 			return 'Design Concept Enquiry';
 
-		case OptionCardId.DESIGN_PROTOTYPE:
+		case OptionId.DESIGN_PROTOTYPE:
 			return 'Design Prototype Enquiry';
 
-		case OptionCardId.DESIGN_DELIVERY:
+		case OptionId.DESIGN_DELIVERY:
 			return 'Design Delivery Enquiry';
 
-		case OptionCardId.BUILD_WEBSITES:
+		case OptionId.BUILD_WEBSITES:
 			return `Website Building Enquiry`;
 
-		case OptionCardId.BUILD_WEB_APP:
+		case OptionId.BUILD_WEB_APP:
 			return `Web App Building Enquiry`;
 
-		case OptionCardId.BUILD_NATIVE_APP:
+		case OptionId.BUILD_NATIVE_APP:
 			return `Native App Building Enquiry`;
 
-		case OptionCardId.HOST_START_UP:
+		case OptionId.HOST_START_UP:
 			return `Start Up Hosting Package Enquiry`;
 
-		case OptionCardId.HOST_SCALE_UP:
+		case OptionId.HOST_SCALE_UP:
 			return `Scale Up Hosting Package Enquiry`;
 
-		case OptionCardId.HOST_BESPOKE:
+		case OptionId.HOST_BESPOKE:
 			return `Bespoke Hosting Enquiry`;
 
-		case OptionCardId.BEYOND_ADVERTISING:
+		case OptionId.BEYOND_ADVERTISING:
 			return `Advertising Enquiry`;
 
-		case OptionCardId.BEYOND_VIDEO_EDITING:
+		case OptionId.BEYOND_VIDEO_EDITING:
 			return `Video Editing Enquiry`;
 
-		case OptionCardId.BEYOND_PHOTO_EDITING:
+		case OptionId.BEYOND_PHOTO_EDITING:
 			return `Photo Editing Enquiry`;
 
-		case OptionCardId.WRITING_CAPTION:
+		case OptionId.WRITING_CAPTION:
 			return `Caption Writing Enquiry`;
 
-		case OptionCardId.WRITING_ARTICLE:
+		case OptionId.WRITING_ARTICLE:
 			return `Article Writing Enquiry`;
 
-		case OptionCardId.WRITING_CONTENT:
+		case OptionId.WRITING_CONTENT:
 			return `Content Writing Enquiry`;
 
 		default:

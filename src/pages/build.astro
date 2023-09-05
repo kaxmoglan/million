@@ -6,7 +6,7 @@ import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
 import OptionCardsWrapper from '../components/wrappers/OptionCardsWrapper.astro';
 import OptionCard from '../components/OptionCard.astro';
 import SeeMore from '../components/SeeMore.astro';
-import { OptionCardId } from '../utils/optionCardUtils';
+import { OptionId } from '../utils/optionCardUtils';
 
 const gridTemplateRows = '2fr 3fr 1fr';
 ---
@@ -32,7 +32,7 @@ const gridTemplateRows = '2fr 3fr 1fr';
 			<OptionCard
 				title="Websites"
 				subtitle="Put your best foot forward."
-				id={OptionCardId.BUILD_WEBSITES}
+				optionId={OptionId.BUILD_WEBSITES}
 				description="Brochure and portfolio websites up to 10 pages that can include integrations with 3rd party services. Websites can be custom built, or built on a platform of your choice such as Wordpress or Squarespace."
 				gridTemplateRows={gridTemplateRows}
 			>
@@ -54,7 +54,7 @@ const gridTemplateRows = '2fr 3fr 1fr';
 			<OptionCard
 				title="Web Apps"
 				subtitle="Custom everything."
-				id={OptionCardId.BUILD_WEB_APP}
+				optionId={OptionId.BUILD_WEB_APP}
 				description="For more advanced websites requiring custom server-side code, or e-commerce platforms run on custom back ends or a platform of your choice like Shopify or Wordpress."
 				gridTemplateRows={gridTemplateRows}
 			>
@@ -73,7 +73,7 @@ const gridTemplateRows = '2fr 3fr 1fr';
 			<OptionCard
 				title="Apps"
 				subtitle="iOS. Android. Mac. Windows."
-				id={OptionCardId.BUILD_NATIVE_APP}
+				optionId={OptionId.BUILD_NATIVE_APP}
 				description="Performant and scaleable mobile and desktop apps. "
 				gridTemplateRows={gridTemplateRows}
 			>

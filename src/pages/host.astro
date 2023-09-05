@@ -6,7 +6,7 @@ import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
 import OptionCardsWrapper from '../components/wrappers/OptionCardsWrapper.astro';
 import OptionCard from '../components/OptionCard.astro';
 import SeeMore from '../components/SeeMore.astro';
-import { OptionCardId } from '../utils/optionCardUtils';
+import { OptionId } from '../utils/optionCardUtils';
 
 const gridTemplateRows = '4fr 1fr';
 ---
@@ -55,7 +55,7 @@ const gridTemplateRows = '4fr 1fr';
 			<OptionCard
 				title="Start up"
 				subtitle="For small businesses"
-				id={OptionCardId.HOST_START_UP}
+				optionId={OptionId.HOST_START_UP}
 				gridTemplateRows={gridTemplateRows}
 			>
 				<div slot="what-you-get">
@@ -79,7 +79,7 @@ const gridTemplateRows = '4fr 1fr';
 			<OptionCard
 				title="Scale up"
 				subtitle="For growing businesses"
-				id={OptionCardId.HOST_SCALE_UP}
+				optionId={OptionId.HOST_SCALE_UP}
 				gridTemplateRows={gridTemplateRows}
 			>
 				<div slot="what-you-get">
@@ -98,7 +98,7 @@ const gridTemplateRows = '4fr 1fr';
 			<OptionCard
 				title="Bespoke"
 				subtitle="For something truly custom"
-				id={OptionCardId.HOST_BESPOKE}
+				optionId={OptionId.HOST_BESPOKE}
 				description="For businesses that require something larger or more complex, get in touch to discuss your requirements."
 				showWhatYouGet={false}
 				showWhatYouPay={false}

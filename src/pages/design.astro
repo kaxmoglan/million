@@ -6,7 +6,7 @@ import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
 import OptionCardsWrapper from '../components/wrappers/OptionCardsWrapper.astro';
 import OptionCard from '../components/OptionCard.astro';
 import SeeMore from '../components/SeeMore.astro';
-import { OptionCardId } from '../utils/optionCardUtils';
+import { OptionId } from '../utils/optionCardUtils';
 
 const gridTemplateRows = '1fr 1.5fr 1fr';
 const optionCardContentHeight = '380px';
@@ -35,7 +35,7 @@ const optionCardContentHeight = '380px';
 			<OptionCard
 				title="Step 1"
 				subtitle="Concept"
-				id={OptionCardId.DESIGN_CONCEPT}
+				optionId={OptionId.DESIGN_CONCEPT}
 				description="You tell us what you’re looking for and give us your brief. This can be as vague or as detailed as you’d like."
 				gridTemplateRows={gridTemplateRows}
 				contentHeight={optionCardContentHeight}
@@ -55,7 +55,7 @@ const optionCardContentHeight = '380px';
 			<OptionCard
 				title="Step 2"
 				subtitle="Prototype"
-				id={OptionCardId.DESIGN_PROTOTYPE}
+				optionId={OptionId.DESIGN_PROTOTYPE}
 				description="Pick one of our concepts and we'll refine your favourite design."
 				gridTemplateRows={gridTemplateRows}
 				contentHeight={optionCardContentHeight}
@@ -75,7 +75,7 @@ const optionCardContentHeight = '380px';
 			<OptionCard
 				title="Step 3"
 				subtitle="Delivery"
-				id={OptionCardId.DESIGN_DELIVERY}
+				optionId={OptionId.DESIGN_DELIVERY}
 				description="Once you're happy with the prototype, we finalise your design and give you all the deliverables."
 				gridTemplateRows={gridTemplateRows}
 				contentHeight={optionCardContentHeight}

@@ -3,25 +3,30 @@ interface Props {
 	text: string;
 	href: string;
 	fullWidth?: boolean;
-	id?: string;
+	small?: boolean;
 }
 
-const { id, text, href, fullWidth = false } = Astro.props;
+const { text, href, fullWidth = false, small = false } = Astro.props;
 ---
 
-<div id={id} class="action-btn" style={{ width: fullWidth ? '100%' : '185px' }}>
+<div
+	class="action-btn"
+	style={{
+		width: fullWidth ? '100%' : small ? '110px' : '185px',
+		height: small ? '35px' : '45px',
+		margin: small ? 0 : '2rem 0',
+	}}
+>
 	<a href={href}>
-		<p>{text}</p>
+		<p style={{ fontSize: small ? '0.8rem' : '1rem' }}>{text}</p>
 	</a>
 </div>
 
-<style lang="scss" }>
+<style lang="scss">
 	@import '../styles/main';
 
 	.action-btn {
 		background-color: $highlightDark;
-		height: 45px;
-		margin: 2rem 0;
 		border-radius: 10px;
 
 		&:hover {

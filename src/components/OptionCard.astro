@@ -1,5 +1,5 @@
 ---
-import type { OptionCardId } from '../utils/optionCardUtils';
+import type { OptionId } from '../utils/optionCardUtils';
 import ActionButton from './ActionButton.astro';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 	description?: string;
 	gridTemplateRows: string;
 	buttonText?: string;
-	id?: OptionCardId;
+	optionId?: OptionId;
 	contentHeight?: string;
 	showWhatYouGet?: boolean;
 	showWhatYouPay?: boolean;
@@ -20,7 +20,7 @@ const {
 	subtitle,
 	description,
 	buttonText = 'Select',
-	id,
+	optionId,
 	gridTemplateRows,
 	showWhatYouGet = true,
 	showWhatYouPay = true,
@@ -69,8 +69,7 @@ const {
 	</div>
 	<ActionButton
 		text={buttonText}
-		href={`../contact?selected-option=${id}`}
-		id={id}
+		href={`../contact?selected-option=${optionId}`}
 		fullWidth
 	/>
 </div>

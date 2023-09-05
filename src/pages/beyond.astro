@@ -26,11 +26,11 @@ const titleSize = '2.5rem';
 						and editing photos and videos to animations and music sourcing.
 						<br />
 						<br />
-						Our advice is…
+						 Our advice is…
 						<br />
 						<br />
-						If you have an idea, get in touch! It’s rare that we can’t offer any
-						help.
+						 If you have an idea, get in touch! It’s rare that we can’t offer
+						any help.
 					</h3>
 					<ActionButton text="Get in touch" href="contact" fullWidth={false} />
 				</FlexWrapper>
@@ -61,6 +61,25 @@ const titleSize = '2.5rem';
 			</OptionCard>
 
 			<OptionCard
+				title="Photo Editing"
+				titleSize={titleSize}
+				subtitle="Your custom filter."
+				id={OptionCardId.BEYOND_PHOTO_EDITING}
+				description="Remove unwanted objects, add text, lighten, darken, effects and more. We can work on a single photo or help you create your own style across a series of photographs."
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>- Edited photos in full size resolution</li>
+						<li>- Edited photos in web-ready size and format</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £99</p>
+				</div>
+			</OptionCard>
+
+			<OptionCard
 				title="Video Editing"
 				titleSize={titleSize}
 				subtitle="Pro motion engagement."
@@ -78,25 +97,6 @@ const titleSize = '2.5rem';
 				</div>
 				<div slot="what-you-pay">
 					<p>From £299</p>
-				</div>
-			</OptionCard>
-
-			<OptionCard
-				title="Photo Editing"
-				titleSize={titleSize}
-				subtitle="Your custom filter."
-				id={OptionCardId.BEYOND_PHOTO_EDITING}
-				description="Remove unwanted objects, add text, lighten, darken, effects and more. We can work on a single photo or help you create your own style across a series of photographs."
-				gridTemplateRows={gridTemplateRows}
-			>
-				<div slot="what-you-get">
-					<ul>
-						<li>- Edited photos in full size resolution</li>
-						<li>- Edited photos in web-ready size and format</li>
-					</ul>
-				</div>
-				<div slot="what-you-pay">
-					<p>From £9,999</p>
 				</div>
 			</OptionCard>
 		</OptionCardsWrapper>

@@ -6,7 +6,7 @@ interface Props {
 	id?: string;
 }
 
-const { id, text, href, fullWidth = true } = Astro.props;
+const { id, text, href, fullWidth = false } = Astro.props;
 ---
 
 <div id={id} class="action-btn" style={{ width: fullWidth ? '100%' : '185px' }}>

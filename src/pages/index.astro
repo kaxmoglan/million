@@ -5,7 +5,8 @@ import NarrowWrapper from '../components/wrappers/NarrowWrapper.astro';
 import Layout from '../layouts/Layout.astro';
 import Grey1 from '../components/SpanTextGrey1.astro';
 import ArrowLink from '../components/ArrowLink.astro';
-import ScrollToTop from '../components/ScrollToTop.astro';
+import ActionButton from '../components/ActionButton.astro';
+import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
 ---
 
 <Layout title="Million">
@@ -56,6 +57,29 @@ import ScrollToTop from '../components/ScrollToTop.astro';
 					/>, whatever your writing needs may be<span class="full-stop">.</span>
 				</p>
 			</NarrowWrapper>
+
+			<h2 class="text-grey1">
+				<span class="text-grey2">We</span><br />go beyond<span
+					class="text-highlight">.</span
+				>
+			</h2>
+
+			<ArrowLink text="Learn More" link="beyond" />
+
+			<NarrowWrapper>
+				<p>
+					We pride ourselves on being <Grey1
+						text="one team for all your digital needs."
+					/> Whether you’re looking for <Grey1
+						text="logo design, video edting, photography, audio editing, music sourcing, social media"
+					/>
+					 and <Grey1 text="advertising campaigns," /> or <Grey1
+						text="consultancy"
+					/> on any service we have to offer, <Grey1 text="we can help" /><span
+						class="full-stop">.</span
+					>
+				</p>
+			</NarrowWrapper>
 		</SectionContent>
 
 		<SectionContent title="Why Million?">
@@ -95,33 +119,11 @@ import ScrollToTop from '../components/ScrollToTop.astro';
 					to <Grey1 text="fixed budgets" /> and deadlines and we never ask for
 					the full fee up front<span class="full-stop">.</span>
 				</p>
-			</NarrowWrapper>
-
-			<h2 class="text-grey1">
-				<span class="text-grey2">We</span><br />go beyond<span
-					class="text-highlight">.</span
-				>
-			</h2>
-
-			<ArrowLink text="Learn More" link="beyond" />
-
-			<NarrowWrapper>
-				<p>
-					We pride ourselves on being <Grey1
-						text="one team for all your digital needs."
-					/> Whether you’re looking for <Grey1
-						text="logo design, video edting, photography, audio editing, music sourcing, social media"
-					/>
-					 and <Grey1 text="advertising campaigns," /> or <Grey1
-						text="consultancy"
-					/> on any service we have to offer, <Grey1 text="we can help" /><span
-						class="full-stop">.</span
-					>
-				</p>
+				<FlexWrapper>
+					<ActionButton text="Get In touch" href="contact" />
+				</FlexWrapper>
 			</NarrowWrapper>
 		</SectionContent>
-
-		<ScrollToTop targetId="hero-section" />
 	</main>
 </Layout>
 

@@ -21,29 +21,29 @@ const gridTemplateRows = '4fr 1fr';
 						Hosting is simple when done the Million way. When you host with us,
 						we handle everything for you.
 					</h3>
+					<p>This means:</p>
 					<div class="checklist-container">
-						<p>This means:</p>
 						<ul>
-							<li>Fully managed <span class="text-highlight">✔</span></li>
+							<li><span class="text-highlight">✔</span>Fully managed</li>
 							<li>
-								Pay only for what you need and use <span class="text-highlight"
-									>✔</span>
+								<span class="text-highlight">✔</span>Pay only for what you need
+								and use
 							</li>
 							<li>
-								No complicated interfaces or language <span
-									class="text-highlight">✔</span>
+								<span class="text-highlight">✔</span>No complicated interfaces
+								or language
 							</li>
 							<li>
-								Help to set up your emails on all your devices <span
-									class="text-highlight">✔</span>
+								<span class="text-highlight">✔</span>Help to set up your emails
+								on all your devices
 							</li>
 							<li>
-								Environmentally conscious <span class="text-highlight">✔</span>
+								<span class="text-highlight">✔</span>Environmentally conscious
 							</li>
 							<li>
-								Daily and weekly backups <span class="text-highlight">✔</span>
+								<span class="text-highlight">✔</span>Daily and weekly backups
 							</li>
-							<li>99.96% uptime <span class="text-highlight">✔</span></li>
+							<li><span class="text-highlight">✔</span>99.96% uptime</li>
 						</ul>
 					</div>
 				</FlexWrapper>
@@ -115,9 +115,14 @@ const gridTemplateRows = '4fr 1fr';
 	.checklist-container {
 		text-align: center;
 		font-size: 1rem;
+		margin-left: -2.5rem;
 
 		@include xs-screen {
 			font-size: 0.8rem;
+		}
+
+		.text-highlight {
+			margin-right: 1rem;
 		}
 
 		ul {

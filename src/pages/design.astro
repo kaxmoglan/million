@@ -8,7 +8,8 @@ import OptionCard from '../components/OptionCard.astro';
 import SeeMore from '../components/SeeMore.astro';
 import { OptionCardId } from '../utils/optionCardUtils';
 
-const gridTemplateRows = '0.7fr 1.3fr 1fr';
+const gridTemplateRows = '1fr 1.5fr 1fr';
+const optionCardContentHeight = '380px';
 ---
 
 <Layout title="Million Digital - Design">
@@ -37,9 +38,12 @@ const gridTemplateRows = '0.7fr 1.3fr 1fr';
 				id={OptionCardId.DESIGN_CONCEPT}
 				description="You tell us what you’re looking for and give us your brief. This can be as vague or as detailed as you’d like."
 				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
 			>
 				<div slot="what-you-get">
-					<p>- 3 design concepts</p>
+					<ul>
+						<li>3 design concepts</li>
+					</ul>
 				</div>
 				<div slot="what-you-pay">
 					<p>From £199 for misc.</p>
@@ -54,9 +58,12 @@ const gridTemplateRows = '0.7fr 1.3fr 1fr';
 				id={OptionCardId.DESIGN_PROTOTYPE}
 				description="Pick one of our concepts and we'll refine your favourite design."
 				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
 			>
 				<div slot="what-you-get">
-					<p>- A refined prototype design</p>
+					<ul>
+						<li>A refined prototype design</li>
+					</ul>
 				</div>
 				<div slot="what-you-pay">
 					<p>From £49 for misc.</p>
@@ -71,14 +78,15 @@ const gridTemplateRows = '0.7fr 1.3fr 1fr';
 				id={OptionCardId.DESIGN_DELIVERY}
 				description="Once you're happy with the prototype, we finalise your design and give you all the deliverables."
 				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
 			>
 				<div slot="what-you-get">
-					<p>
-						For logos and misc. material, this will be the final vector and
-						image files ready for commercial use. For websites and apps, this
-						can be the design files, a fully interactive prototype, or we can
-						move onto to the build phase of your project.
-					</p>
+					<ul>
+						<li>
+							The finished image files ready for commercial use, or deployed
+							website or app
+						</li>
+					</ul>
 				</div>
 				<div slot="what-you-pay">
 					<p>From £49 for misc.</p>

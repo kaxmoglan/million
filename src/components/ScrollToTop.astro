@@ -2,10 +2,10 @@
 import { Icon } from 'astro-icon';
 
 interface Props {
-	targetId: string;
+	targetId?: string;
 }
 
-const { targetId } = Astro.props;
+const { targetId = 'page-top' } = Astro.props;
 ---
 
 <scroll-to-top data-target-id={targetId}>

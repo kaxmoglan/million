@@ -8,34 +8,32 @@ import OptionTile from '../components/OptionTile.astro';
 ---
 
 <Layout title="Million Digital - Pricing">
-	<main>
-		<FullScreenWrapper>
-			<NarrowWrapper>
-				<FlexWrapper flexDirection="column" className="page__header">
-					<h1>pricing<span class="full-stop">.</span></h1>
-					<h3>
-						Our price structure is always tailored to the work we carry out and
-						we only ever charge you for the work we do.
-						<br />
-						<br />
-						 No hidden costs. No huge deposits.
-					</h3>
-				</FlexWrapper>
-			</NarrowWrapper>
-			<SeeMore targetId="option-tiles" />
-		</FullScreenWrapper>
+	<FullScreenWrapper>
+		<NarrowWrapper>
+			<FlexWrapper flexDirection="column" className="page__header">
+				<h1>pricing<span class="full-stop">.</span></h1>
+				<h3>
+					Our price structure is always tailored to the work we carry out and we
+					only ever charge you for the work we do.
+					<br />
+					<br />
+					 No hidden costs. No huge deposits.
+				</h3>
+			</FlexWrapper>
+		</NarrowWrapper>
+		<SeeMore targetId="option-tiles" />
+	</FullScreenWrapper>
 
-		<FullScreenWrapper id="option-tiles">
-			<div class="option-tiles-container">
-				<OptionTile title="Design" price="From £199" linkTo="../design" />
-				<OptionTile title="Build" price="From £199" linkTo="../build" />
-				<OptionTile title="Host" price="From £199" linkTo="../host" />
-				<OptionTile title="Write" price="From £199" linkTo="../write" />
-				<OptionTile title="Photo Editing" price="From £199" linkTo="../host" />
-				<OptionTile title="Video Editing" price="From £199" linkTo="../host" />
-			</div>
-		</FullScreenWrapper>
-	</main>
+	<FullScreenWrapper id="option-tiles">
+		<div class="option-tiles-container">
+			<OptionTile title="Design" price="From £199" linkTo="../design" />
+			<OptionTile title="Build" price="From £199" linkTo="../build" />
+			<OptionTile title="Host" price="From £199" linkTo="../host" />
+			<OptionTile title="Write" price="From £199" linkTo="../write" />
+			<OptionTile title="Photo Editing" price="From £199" linkTo="../host" />
+			<OptionTile title="Video Editing" price="From £199" linkTo="../host" />
+		</div>
+	</FullScreenWrapper>
 </Layout>
 
 <style lang="scss">

@@ -7,91 +7,89 @@ import OptionCardsWrapper from '../components/wrappers/OptionCardsWrapper.astro'
 import OptionCard from '../components/OptionCard.astro';
 import SeeMore from '../components/SeeMore.astro';
 import { OptionId } from '../utils/optionCardUtils';
+import ScrollToTop from '../components/ScrollToTop.astro';
 
 const gridTemplateRows = '2fr 3fr 1fr';
 ---
 
 <Layout title="Million Digital - Build">
-	<main>
-		<FullScreenWrapper>
-			<NarrowWrapper>
-				<FlexWrapper flexDirection="column" className="page__header">
-					<h1>build<span class="full-stop">.</span></h1>
-					<h3>
-						Our team of developers bring your design to life and then some. Our
-						websites and apps are always compatible across all devices, built
-						with an SEO and mobile-first approach and, most importantly, are
-						maintainable, scalable, accessible and blazingly fast.
-					</h3>
-				</FlexWrapper>
-			</NarrowWrapper>
-			<SeeMore targetId="option-cards" />
-		</FullScreenWrapper>
+	<FullScreenWrapper>
+		<NarrowWrapper>
+			<FlexWrapper flexDirection="column" className="page__header">
+				<h1>build<span class="full-stop">.</span></h1>
+				<h3>
+					Our team of developers bring your design to life and then some. Our
+					websites and apps are always compatible across all devices, built with
+					an SEO and mobile-first approach and, most importantly, are
+					maintainable, scalable, accessible and blazingly fast.
+				</h3>
+			</FlexWrapper>
+		</NarrowWrapper>
+		<SeeMore targetId="option-cards" />
+	</FullScreenWrapper>
 
-		<OptionCardsWrapper id="option-cards">
-			<OptionCard
-				title="Websites"
-				subtitle="Put your best foot forward."
-				optionId={OptionId.BUILD_WEBSITES}
-				description="Brochure and portfolio websites up to 10 pages that can include integrations with 3rd party services. Websites can be custom built, or built on a platform of your choice such as Wordpress or Squarespace."
-				gridTemplateRows={gridTemplateRows}
-			>
-				<div slot="what-you-get">
-					<ul>
-						<li>Fully responsive website</li>
-						<li>SEO and mobile-first approach</li>
-						<li>12 months technical support</li>
-						<li>3 months Start Up hosting</li>
-						<li>25% off updates for 12 months</li>
-						<li>10% off new added features</li>
-					</ul>
-				</div>
-				<div slot="what-you-pay">
-					<p>From £999</p>
-				</div>
-			</OptionCard>
+	<OptionCardsWrapper id="option-cards">
+		<OptionCard
+			title="Websites"
+			subtitle="Put your best foot forward."
+			optionId={OptionId.BUILD_WEBSITES}
+			description="Brochure and portfolio websites up to 10 pages that can include integrations with 3rd party services. Websites can be custom built, or built on a platform of your choice such as Wordpress or Squarespace."
+			gridTemplateRows={gridTemplateRows}
+		>
+			<div slot="what-you-get">
+				<ul>
+					<li>Fully responsive website</li>
+					<li>SEO and mobile-first approach</li>
+					<li>12 months technical support</li>
+					<li>3 months Start Up hosting</li>
+					<li>25% off updates for 12 months</li>
+					<li>10% off new added features</li>
+				</ul>
+			</div>
+			<div slot="what-you-pay">
+				<p>From £999</p>
+			</div>
+		</OptionCard>
 
-			<OptionCard
-				title="Web Apps"
-				subtitle="Custom everything."
-				optionId={OptionId.BUILD_WEB_APP}
-				description="For more advanced websites requiring custom server-side code, or e-commerce platforms run on custom back ends or a platform of your choice like Shopify or Wordpress."
-				gridTemplateRows={gridTemplateRows}
-			>
-				<div slot="what-you-get">
-					<ul>
-						<li>Everything under Websites</li>
-						<li>Fully response web app</li>
-						<li>3 months Scale Up hosting</li>
-					</ul>
-				</div>
-				<div slot="what-you-pay">
-					<p>From £1,999</p>
-				</div>
-			</OptionCard>
+		<OptionCard
+			title="Web Apps"
+			subtitle="Custom everything."
+			optionId={OptionId.BUILD_WEB_APP}
+			description="For more advanced websites requiring custom server-side code, or e-commerce platforms run on custom back ends or a platform of your choice like Shopify or Wordpress."
+			gridTemplateRows={gridTemplateRows}
+		>
+			<div slot="what-you-get">
+				<ul>
+					<li>Everything under Websites</li>
+					<li>Fully response web app</li>
+					<li>3 months Scale Up hosting</li>
+				</ul>
+			</div>
+			<div slot="what-you-pay">
+				<p>From £1,999</p>
+			</div>
+		</OptionCard>
 
-			<OptionCard
-				title="Apps"
-				subtitle="iOS. Android. Mac. Windows."
-				optionId={OptionId.BUILD_NATIVE_APP}
-				description="Performant and scaleable mobile and desktop apps. "
-				gridTemplateRows={gridTemplateRows}
-			>
-				<div slot="what-you-get">
-					<ul>
-						<li>
-							A mobile or desktop application deployed to all relevant app
-							stores
-						</li>
-						<li>-12 months technical support</li>
-						<li>-25% off updates for 12 months</li>
-						<li>-10% off new feature builds for 12 months</li>
-					</ul>
-				</div>
-				<div slot="what-you-pay">
-					<p>From £9,999</p>
-				</div>
-			</OptionCard>
-		</OptionCardsWrapper>
-	</main>
+		<OptionCard
+			title="Apps"
+			subtitle="iOS. Android. Mac. Windows."
+			optionId={OptionId.BUILD_NATIVE_APP}
+			description="Performant and scaleable mobile and desktop apps. "
+			gridTemplateRows={gridTemplateRows}
+		>
+			<div slot="what-you-get">
+				<ul>
+					<li>
+						A mobile or desktop application deployed to all relevant app stores
+					</li>
+					<li>-12 months technical support</li>
+					<li>-25% off updates for 12 months</li>
+					<li>-10% off new feature builds for 12 months</li>
+				</ul>
+			</div>
+			<div slot="what-you-pay">
+				<p>From £9,999</p>
+			</div>
+		</OptionCard>
+	</OptionCardsWrapper>
 </Layout>

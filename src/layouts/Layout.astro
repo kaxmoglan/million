@@ -20,7 +20,11 @@ const { title, hideBackToTop = false } = Astro.props;
 	</head>
 	<body>
 		<div id="page-top"></div>
-		<slot />
-		{!hideBackToTop && <ScrollToTop targetId="page-top" />}
+		<main>
+			<slot />
+		</main>
+		<div style={{ marginTop: '5rem' }}>
+			<ScrollToTop />
+		</div>
 	</body>
 </html>

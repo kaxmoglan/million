@@ -14,67 +14,65 @@ const optionCardContentHeight = '230px';
 ---
 
 <Layout title="Million Digital - Write">
-	<main>
-		<FullScreenWrapper>
-			<NarrowWrapper>
-				<FlexWrapper flexDirection="column" className="page__header">
-					<h1>write<span class="full-stop">.</span></h1>
-					<h3>
-						Creating effective online content is simple with Million. We can
-						write anything from photo captions, status updates, tweets and
-						comment replies, to managing an entire blog and creating all your
-						marketing content for you.
-					</h3>
-				</FlexWrapper>
-			</NarrowWrapper>
-			<SeeMore targetId="option-cards" />
-		</FullScreenWrapper>
+	<FullScreenWrapper>
+		<NarrowWrapper>
+			<FlexWrapper flexDirection="column" className="page__header">
+				<h1>write<span class="full-stop">.</span></h1>
+				<h3>
+					Creating effective online content is simple with Million. We can write
+					anything from photo captions, status updates, tweets and comment
+					replies, to managing an entire blog and creating all your marketing
+					content for you.
+				</h3>
+			</FlexWrapper>
+		</NarrowWrapper>
+		<SeeMore targetId="option-cards" />
+	</FullScreenWrapper>
 
-		<OptionCardsWrapper id="option-cards">
-			<OptionCard
-				title="Caption"
-				titleSize={titleSize}
-				subtitle="Grab with a headline."
-				optionId={OptionId.WRITING_CAPTION}
-				description="Our writers can create captions, status updates, tweets and more, all designed to increase user engagement and generate new leads."
-				showWhatYouGet={false}
-				gridTemplateRows={gridTemplateRows}
-				contentHeight={optionCardContentHeight}
-			>
-				<div slot="what-you-pay">
-					<p>From £49</p>
-				</div>
-			</OptionCard>
+	<OptionCardsWrapper id="option-cards">
+		<OptionCard
+			title="Caption"
+			titleSize={titleSize}
+			subtitle="Grab with a headline."
+			optionId={OptionId.WRITING_CAPTION}
+			description="Our writers can create captions, status updates, tweets and more, all designed to increase user engagement and generate new leads."
+			showWhatYouGet={false}
+			gridTemplateRows={gridTemplateRows}
+			contentHeight={optionCardContentHeight}
+		>
+			<div slot="what-you-pay">
+				<p>From £49</p>
+			</div>
+		</OptionCard>
 
-			<OptionCard
-				title="Article"
-				titleSize={titleSize}
-				subtitle="Engage with a story."
-				optionId={OptionId.WRITING_ARTICLE}
-				description="One-off articles or a series of posts designed to engage new and existing customers with your brand story."
-				showWhatYouGet={false}
-				gridTemplateRows={gridTemplateRows}
-				contentHeight={optionCardContentHeight}
-			>
-				<div slot="what-you-pay">
-					<p>From £299</p>
-				</div>
-			</OptionCard>
+		<OptionCard
+			title="Article"
+			titleSize={titleSize}
+			subtitle="Engage with a story."
+			optionId={OptionId.WRITING_ARTICLE}
+			description="One-off articles or a series of posts designed to engage new and existing customers with your brand story."
+			showWhatYouGet={false}
+			gridTemplateRows={gridTemplateRows}
+			contentHeight={optionCardContentHeight}
+		>
+			<div slot="what-you-pay">
+				<p>From £299</p>
+			</div>
+		</OptionCard>
 
-			<OptionCard
-				title="Content"
-				titleSize={titleSize}
-				subtitle="Full marketing content."
-				optionId={OptionId.WRITING_CONTENT}
-				description="Effective marketing content in your brand’s voice."
-				showWhatYouGet={false}
-				gridTemplateRows={gridTemplateRows}
-				contentHeight={optionCardContentHeight}
-			>
-				<div slot="what-you-pay">
-					<p>From £599</p>
-				</div>
-			</OptionCard>
-		</OptionCardsWrapper>
-	</main>
+		<OptionCard
+			title="Content"
+			titleSize={titleSize}
+			subtitle="Full marketing content."
+			optionId={OptionId.WRITING_CONTENT}
+			description="Effective marketing content in your brand’s voice."
+			showWhatYouGet={false}
+			gridTemplateRows={gridTemplateRows}
+			contentHeight={optionCardContentHeight}
+		>
+			<div slot="what-you-pay">
+				<p>From £599</p>
+			</div>
+		</OptionCard>
+	</OptionCardsWrapper>
 </Layout>

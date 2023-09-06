@@ -9,8 +9,9 @@ export enum OptionId {
 	HOST_SCALE_UP = 'host-scale-up',
 	HOST_BESPOKE = 'host-bespoke',
 	BEYOND_ADVERTISING = 'advertising',
-	BEYOND_VIDEO_EDITING = 'video-editing',
-	BEYOND_PHOTO_EDITING = 'photo-editing',
+	EDIT_VIDEO = 'video-editing',
+	EDIT_PHOTO = 'photo-editing',
+	EDIT_AUDIO = 'audio-editing',
 	WRITING_CAPTION = 'writing-caption',
 	WRITING_ARTICLE = 'writing-article',
 	WRITING_CONTENT = 'writing-content',
@@ -48,11 +49,14 @@ export const getFormSubject = (buttonId: OptionId): string => {
 		case OptionId.BEYOND_ADVERTISING:
 			return `Advertising Enquiry`;
 
-		case OptionId.BEYOND_VIDEO_EDITING:
+		case OptionId.EDIT_VIDEO:
 			return `Video Editing Enquiry`;
 
-		case OptionId.BEYOND_PHOTO_EDITING:
+		case OptionId.EDIT_PHOTO:
 			return `Photo Editing Enquiry`;
+
+		case OptionId.EDIT_AUDIO:
+			return `Audio Editing Enquiry`;
 
 		case OptionId.WRITING_CAPTION:
 			return `Caption Writing Enquiry`;

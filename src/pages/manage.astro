@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FullScreenWrapper from '../components/wrappers/FullScreenWrapper.astro';
+import NarrowWrapper from '../components/wrappers/NarrowWrapper.astro';
+import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
+import OptionCardsWrapper from '../components/wrappers/OptionCardsWrapper.astro';
+import OptionCard from '../components/OptionCard.astro';
+import SeeMore from '../components/SeeMore.astro';
+import { OptionId } from '../utils/optionCardUtils';
+
+const gridTemplateRows = '3fr 2.5fr 1fr';
+const titleSize = '2.5rem';
+---
+
+<Layout title="Million Digital - Manage">
+	<FullScreenWrapper>
+		<NarrowWrapper>
+			<FlexWrapper flexDirection="column" className="page__header">
+				<h1>manage<span class="full-stop">.</span></h1>
+				<h3>
+					Time and stress free management by Million. Reach a wider audience
+					with a bespoke advertising campaign plan or engage with new and
+					existing customers like never before with our social maedia
+					management.
+				</h3>
+			</FlexWrapper>
+		</NarrowWrapper>
+		<SeeMore targetId="option-cards" />
+	</FullScreenWrapper>
+
+	<OptionCardsWrapper id="option-cards">
+		<OptionCard
+			title="Advertising"
+			titleSize={titleSize}
+			subtitle="Set a budget. Let it rip."
+			optionId={OptionId.MANAGE_ADVERTISING}
+			description="Set a fixed monthly budget and watch your engagement and sales soar."
+			gridTemplateRows={gridTemplateRows}
+		>
+			<div slot="what-you-get">
+				<ul>
+					<li>Bespoke campaign plan</li>
+					<li>Actively managed campaign</li>
+					<li>Monthly reports</li>
+				</ul>
+			</div>
+			<div slot="what-you-pay">
+				<p>From £799 per month</p>
+			</div>
+		</OptionCard>
+
+		<OptionCard
+			title="Social Media"
+			titleSize={titleSize}
+			subtitle="Turn off the notification bell."
+			optionId={OptionId.MANAGE_SOCIAL_MEDIA}
+			description="Take the time and stress out of social media."
+			gridTemplateRows={gridTemplateRows}
+		>
+			<div slot="what-you-get">
+				<ul>
+					<li>Bespoke plan</li>
+					<li>Monthly reports</li>
+					<li>Comment moderation</li>
+					<li>Comment and message replies</li>
+					<li>Scheduled posts to all platforms</li>
+				</ul>
+			</div>
+			<div slot="what-you-pay">
+				<p>From £299</p>
+			</div>
+		</OptionCard>
+	</OptionCardsWrapper>
+
+	<FullScreenWrapper />
+</Layout>

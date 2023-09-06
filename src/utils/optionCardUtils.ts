@@ -15,6 +15,8 @@ export enum OptionId {
 	WRITING_CAPTION = 'writing-caption',
 	WRITING_ARTICLE = 'writing-article',
 	WRITING_CONTENT = 'writing-content',
+	MANAGE_ADVERTISING = 'manage-advertising',
+	MANAGE_SOCIAL_MEDIA = 'manage-social-media',
 }
 
 export const getFormSubject = (buttonId: OptionId): string => {
@@ -66,6 +68,12 @@ export const getFormSubject = (buttonId: OptionId): string => {
 
 		case OptionId.WRITING_CONTENT:
 			return `Content Writing Enquiry`;
+
+		case OptionId.MANAGE_ADVERTISING:
+			return `Advertising Campaign Management Enquiry`;
+
+		case OptionId.MANAGE_SOCIAL_MEDIA:
+			return `Social Media Management Enquiry`;
 
 		default:
 			throw new Error('Unknown OptionCardId');

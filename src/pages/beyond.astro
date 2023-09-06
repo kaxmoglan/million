@@ -13,7 +13,7 @@ const gridTemplateRows = '3fr 2.5fr 1fr';
 const titleSize = '2.5rem';
 ---
 
-<Layout title="Million Digital - Beyond">
+<Layout title="Million Digital - Beyond" hideBackToTop>
 	<FullScreenWrapper>
 		<NarrowWrapper>
 			<FlexWrapper flexDirection="column" className="page__header">
@@ -34,71 +34,5 @@ const titleSize = '2.5rem';
 				<ActionButton text="Get in touch" href="contact" />
 			</FlexWrapper>
 		</NarrowWrapper>
-		<SeeMore targetId="option-cards" />
 	</FullScreenWrapper>
-
-	<OptionCardsWrapper id="option-cards">
-		<OptionCard
-			title="Advertising"
-			titleSize={titleSize}
-			subtitle="Set a budget. Let it rip."
-			optionId={OptionId.BEYOND_ADVERTISING}
-			description="Set a fixed monthly budget and watch your engagement and sales soar."
-			gridTemplateRows={gridTemplateRows}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>Initial consultation</li>
-					<li>Full campaign plan</li>
-					<li>Actively managed campaign</li>
-					<li>Monthly reports</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £799 per month</p>
-			</div>
-		</OptionCard>
-
-		<OptionCard
-			title="Photo Editing"
-			titleSize={titleSize}
-			subtitle="Your custom filter."
-			optionId={OptionId.BEYOND_PHOTO_EDITING}
-			description="Remove unwanted objects, add text, lighten, darken, effects and more. We can work on a single photo or help you create your own style across a series of photographs."
-			gridTemplateRows={gridTemplateRows}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>Edited photos in full size resolution</li>
-					<li>Edited photos in web-ready size and format</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £99</p>
-			</div>
-		</OptionCard>
-
-		<OptionCard
-			title="Video Editing"
-			titleSize={titleSize}
-			subtitle="Pro motion engagement."
-			optionId={OptionId.BEYOND_VIDEO_EDITING}
-			description="Good video editing is the difference between a watched video and a skipped one. Engage new and existing customers like never before with professionally edited videos delivered in the proper formats and resolution for every platform you’re customers are on."
-			gridTemplateRows={gridTemplateRows}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>
-						Edited video files in the perfect size and quality for all your
-						social platforms.
-					</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £299</p>
-			</div>
-		</OptionCard>
-	</OptionCardsWrapper>
-
-	<FullScreenWrapper />
 </Layout>

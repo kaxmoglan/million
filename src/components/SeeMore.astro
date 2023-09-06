@@ -2,10 +2,10 @@
 import { Icon } from 'astro-icon';
 
 interface Props {
-	targetId: string;
+	targetId?: string;
 }
 
-const { targetId } = Astro.props;
+const { targetId = 'option-cards' } = Astro.props;
 ---
 
 <see-more data-target-id={targetId}>

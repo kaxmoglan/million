@@ -3,7 +3,7 @@ interface Props {
 	id?: string;
 }
 
-const { id } = Astro.props;
+const { id = 'option-cards' } = Astro.props;
 ---
 
 <div id={id} class="container">

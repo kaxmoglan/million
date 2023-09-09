@@ -4,6 +4,7 @@ import NavigationTiles from './NavigationTiles.astro';
 ---
 
 <script>
+	console.log('script');
 	const menuBtn = document.querySelector('.navbar__hamburger');
 	const navBar = document.querySelector('.mobile-nav');
 	const tileLinks = document.querySelectorAll('.tile-link-li');
@@ -14,12 +15,16 @@ import NavigationTiles from './NavigationTiles.astro';
 	const toggleMenu = () => navBar?.classList.toggle('open');
 
 	const animateHamburgerOpen = () => {
+		if (isMenuOpen) return;
+
 		menuBtn?.classList.add('center');
 		setTimeout(() => menuBtn?.classList.add('rotate'), 250);
 		isMenuOpen = true;
 	};
 
 	const animateHamburgerClosed = () => {
+		if (!isMenuOpen) return;
+
 		menuBtn?.classList.remove('rotate');
 		setTimeout(() => menuBtn?.classList.remove('center'), 250);
 		isMenuOpen = false;
@@ -42,7 +47,7 @@ import NavigationTiles from './NavigationTiles.astro';
 	);
 </script>
 
-<nav class="mobile-nav">
+<nav class="mobile-nav" transition:persist>
 	<div class="navbar">
 		<a class="mobile-nav-logo" href="/"><NavLogo /></a>
 		<div class="navbar__hamburger">

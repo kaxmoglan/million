@@ -1,0 +1,97 @@
+---
+import NavLogo from './NavLogo.astro';
+import NavigationTiles from './NavigationTiles.astro';
+---
+
+<script>
+	const menuBtn = document.querySelector('.navbar__hamburger');
+	const navBar = document.querySelector('.mobile-nav');
+	const tileLinks = document.querySelectorAll('.tile-link-li');
+	const logo = document.querySelector('.mobile-nav-logo');
+
+	const toggleMenu = () => navBar?.classList.toggle('open');
+
+	menuBtn?.addEventListener('click', toggleMenu);
+	tileLinks.forEach((link) => link.addEventListener('click', toggleMenu));
+	logo?.addEventListener('click', () => navBar?.classList.remove('open'));
+</script>
+
+<nav transition:persist class="mobile-nav">
+	<div class="navbar">
+		<a class="mobile-nav-logo" href="/"><NavLogo /></a>
+		<div class="navbar__hamburger"></div>
+	</div>
+	<div class="mobile-nav__menu">
+		<NavigationTiles />
+		<NavigationTiles />
+	</div>
+</nav>
+
+<style lang="scss">
+	@import '../../styles/main';
+
+	:root {
+		--navbarHeight: 44px;
+	}
+
+	.mobile-nav {
+		display: none;
+		@include sm-screen {
+			display: block;
+			z-index: 1;
+		}
+
+		background-color: $lightBlack;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: var(--navbarHeight);
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition-duration: 320ms;
+		// border: 1px solid hotpink;
+
+		&.open {
+			height: 100vh;
+			position: fixed;
+			overflow: scroll;
+			background-color: rgba(37, 37, 37, 0.6);
+			backdrop-filter: blur(20px);
+
+			.mobile-nav__menu {
+				visibility: visible;
+				opacity: 1;
+				transform: translateY(0);
+				transition-duration: 250ms;
+				transition-delay: 150ms;
+			}
+		}
+
+		&__menu {
+			width: 100%;
+			max-width: 1000px;
+			visibility: hidden;
+			opacity: 0;
+			transform: translateY(-20px);
+			transition-duration: 150ms;
+			// background-color: $lightBlack;
+		}
+	}
+
+	.navbar {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1rem;
+
+		&__hamburger {
+			height: 30px;
+			width: 30px;
+			border: 1px solid hotpink;
+		}
+	}
+</style>

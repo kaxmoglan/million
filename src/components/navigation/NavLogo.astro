@@ -1,0 +1,35 @@
+<p id="million-logo">M</p>
+
+<style lang="scss">
+	@import '../../styles/main';
+
+	#million-logo {
+		color: $highlight;
+		position: relative;
+
+		&:hover {
+			&::before {
+				transform: translateY(-1px);
+			}
+		}
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 1px;
+			top: -1px;
+			width: 86%;
+			height: 2px;
+			background-color: $highlight;
+			transition: all 250ms ease-in-out;
+		}
+
+		@include sm-screen {
+			transform: scale(1.2);
+			color: $white;
+			&::before {
+				background-color: $white;
+			}
+		}
+	}
+</style>

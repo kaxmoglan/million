@@ -3,6 +3,8 @@ import { ViewTransitions } from 'astro:transitions';
 import ScrollToTop from '../components/ScrollToTop.astro';
 import '../styles/main.scss';
 import NavDesktop from '../components/navigation/NavDesktop.astro';
+import NavMobile from '../components/navigation/NavMobile.astro';
+
 export interface Props {
 	title: string;
 	hideBackToTop?: boolean;
@@ -24,6 +26,7 @@ const { title, hideBackToTop = false } = Astro.props;
 	<body>
 		<div id="page-top"></div>
 		<NavDesktop />
+		<NavMobile />
 		<main>
 			<slot />
 		</main>

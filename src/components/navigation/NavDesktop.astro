@@ -1,11 +1,12 @@
 ---
+import NavLogo from './NavLogo.astro';
 import NavigationTiles from './NavigationTiles.astro';
 ---
 
 <nav transition:persist>
 	<div class="navbar">
 		<ul class="navbar__main">
-			<li><a href="/"><p id="million-logo">M</p></a></li>
+			<li><a href="/"><NavLogo /></a></li>
 			<li><a href="design"><p>web</p></a></li>
 			<li><a href="write"><p>content</p></a></li>
 			<li><a href="maintain"><p>more</p></a></li>
@@ -26,6 +27,10 @@ import NavigationTiles from './NavigationTiles.astro';
 	}
 
 	nav {
+		@include sm-screen {
+			display: none;
+		}
+
 		z-index: 2;
 		background-color: $lightBlack;
 		position: absolute;
@@ -100,29 +105,11 @@ import NavigationTiles from './NavigationTiles.astro';
 		}
 	}
 
-	#million-logo {
-		color: $highlight;
-		position: relative;
-
-		&:hover {
-			&::before {
-				transform: translateY(-1px);
-			}
-		}
-		&::before {
-			content: '';
-			display: block;
-			position: absolute;
-			left: 1px;
-			top: -1px;
-			width: 86%;
-			height: 2px;
-			background-color: $highlight;
-			transition: all 250ms ease-in-out;
-		}
-	}
-
 	.curtain {
+		@include sm-screen {
+			display: none;
+		}
+
 		transition: all 350ms ease-in-out;
 		position: fixed;
 		top: 0;

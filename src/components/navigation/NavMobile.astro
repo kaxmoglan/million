@@ -13,23 +13,33 @@ import NavigationTiles from './NavigationTiles.astro';
 
 	const toggleMenu = () => navBar?.classList.toggle('open');
 
-	const handleMenuClick = () => {
-		toggleMenu();
-
-		if (!isMenuOpen) {
-			menuBtn?.classList.add('center');
-			setTimeout(() => menuBtn?.classList.add('rotate'), 250);
-			isMenuOpen = true;
-		} else {
-			menuBtn?.classList.remove('rotate');
-			setTimeout(() => menuBtn?.classList.remove('center'), 250);
-			isMenuOpen = false;
-		}
+	const animateHamburgerOpen = () => {
+		menuBtn?.classList.add('center');
+		setTimeout(() => menuBtn?.classList.add('rotate'), 250);
+		isMenuOpen = true;
 	};
 
-	menuBtn?.addEventListener('click', handleMenuClick);
-	tileLinks.forEach((link) => link.addEventListener('click', toggleMenu));
-	logo?.addEventListener('click', () => navBar?.classList.remove('open'));
+	const animateHamburgerClosed = () => {
+		menuBtn?.classList.remove('rotate');
+		setTimeout(() => menuBtn?.classList.remove('center'), 250);
+		isMenuOpen = false;
+	};
+
+	const handleMenuItemClick = () => {
+		toggleMenu();
+		isMenuOpen ? animateHamburgerClosed() : animateHamburgerOpen();
+	};
+
+	const handleLogoClick = () => {
+		navBar?.classList.remove('open');
+		animateHamburgerClosed();
+	};
+
+	menuBtn?.addEventListener('click', handleMenuItemClick);
+	logo?.addEventListener('click', handleLogoClick);
+	tileLinks.forEach((link) =>
+		link.addEventListener('click', handleMenuItemClick)
+	);
 </script>
 
 <nav transition:persist class="mobile-nav">

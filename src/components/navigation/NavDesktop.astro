@@ -1,0 +1,118 @@
+---
+import NavigationTiles from './NavigationTiles.astro';
+---
+
+<header transition:persist>
+	<nav>
+		<div class="navbar">
+			<ul class="navbar__main">
+				<li><a href="design"><p>web</p></a></li>
+				<li><a href="write"><p>content</p></a></li>
+				<li><a href="maintain"><p>more</p></a></li>
+				<li><a href="contact"><p>contact</p></a></li>
+			</ul>
+		</div>
+		<div class="navbar__extended">
+			<NavigationTiles />
+		</div>
+	</nav>
+	<div class="curtain" id="nav-curtain"></div>
+</header>
+
+<style lang="scss">
+	@import '../../styles/main';
+	:root {
+		--navbarHeight: 44px;
+	}
+
+	nav {
+		z-index: 2;
+		background-color: $lightBlack;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: var(--navbarHeight);
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition-duration: 320ms;
+
+		&:hover {
+			height: 280px;
+
+			.navbar__extended {
+				visibility: visible;
+				opacity: 1;
+				transform: translateY(0);
+				transition-duration: 250ms;
+				transition-delay: 150ms;
+			}
+			~ .curtain {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	.navbar {
+		z-index: 2;
+		display: flex;
+		position: relative;
+
+		&__main {
+			height: var(--navbarHeight);
+			margin: 0;
+			padding: 0;
+			display: flex;
+			gap: 2rem;
+
+			li {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				font-weight: bold;
+				color: $grey2;
+
+				a {
+					height: 100%;
+					width: 100%;
+					display: flex;
+					align-items: center;
+					text-decoration: none;
+					color: inherit;
+				}
+
+				p {
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+
+		&__extended {
+			width: 100%;
+			max-width: 1000px;
+			visibility: hidden;
+			opacity: 0;
+			transform: translateY(-20px);
+			transition-duration: 150ms;
+		}
+	}
+
+	.curtain {
+		transition: all 350ms ease-in-out;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 1;
+
+		background-color: rgba(100, 100, 100, 0.3);
+		backdrop-filter: blur(20px);
+
+		opacity: 0;
+		visibility: hidden;
+	}
+</style>

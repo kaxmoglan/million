@@ -1,0 +1,111 @@
+---
+type TilesData = Array<{
+	title: string;
+	links: Array<{ title: string; href: string }>;
+}>;
+
+const tilesData: TilesData = [
+	{
+		title: 'explore web',
+		links: [
+			{ title: 'design', href: 'design' },
+			{ title: 'build', href: 'build' },
+			{ title: 'host', href: 'host' },
+		],
+	},
+	{
+		title: 'explore content',
+		links: [
+			{ title: 'write', href: 'write' },
+			{ title: 'edit', href: 'edit' },
+			{ title: 'manage', href: 'manage' },
+		],
+	},
+	{
+		title: 'explore more',
+		links: [
+			{ title: 'maintain', href: 'maintain' },
+			{ title: 'beyond', href: 'beyond' },
+		],
+	},
+	{
+		title: 'get in touch',
+		links: [{ title: 'contact', href: 'contact' }],
+	},
+];
+---
+
+<div class="container">
+	{
+		tilesData.map((tile) => (
+			<div class="tile">
+				<div class="tile__title">
+					<h2>{tile.title}</h2>
+				</div>
+				<div class="tile__links">
+					<ul>
+						{tile.links.map((link) => (
+							<li class="tile-link-li">
+								<a href={link.href}>
+									{link.title}
+									<span class="full-stop">.</span>
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			</div>
+		))
+	}
+</div>
+
+<style lang="scss">
+	@import '../../styles/main';
+
+	.container {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		padding: 2rem 5rem;
+	}
+
+	.tile {
+		width: 200px;
+	}
+
+	h2 {
+		font-size: 1rem;
+		font-weight: normal;
+		color: $grey3;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 1rem 0;
+		padding: 0;
+	}
+
+	li {
+		padding-bottom: 1rem;
+	}
+
+	a {
+		color: $grey1;
+		text-decoration: none;
+		font-weight: normal;
+		font-size: 1.2rem;
+
+		.full-stop {
+			opacity: 0;
+		}
+
+		&:hover {
+			.full-stop {
+				opacity: 1;
+			}
+		}
+	}
+</style>

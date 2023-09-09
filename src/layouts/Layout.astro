@@ -2,14 +2,13 @@
 import { ViewTransitions } from 'astro:transitions';
 import ScrollToTop from '../components/ScrollToTop.astro';
 import '../styles/main.scss';
-import NavDesktop from '../components/NavDesktop.astro';
+import NavDesktop from '../components/navigation/NavDesktop.astro';
 export interface Props {
 	title: string;
-	currentPage: string;
 	hideBackToTop?: boolean;
 }
 
-const { title, hideBackToTop = false, currentPage } = Astro.props;
+const { title, hideBackToTop = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -24,7 +23,7 @@ const { title, hideBackToTop = false, currentPage } = Astro.props;
 	</head>
 	<body>
 		<div id="page-top"></div>
-		<NavDesktop currentPage={currentPage} />
+		<NavDesktop />
 		<main>
 			<slot />
 		</main>

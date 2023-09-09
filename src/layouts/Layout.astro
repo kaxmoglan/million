@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
 import ScrollToTop from '../components/ScrollToTop.astro';
 import '../styles/main.scss';
 import NavDesktop from '../components/navigation/NavDesktop.astro';
@@ -20,7 +19,6 @@ const { title, hideBackToTop = false } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<ViewTransitions />
 		<title>{title}</title>
 	</head>
 	<body>

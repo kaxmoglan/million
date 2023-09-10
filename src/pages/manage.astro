@@ -28,49 +28,49 @@ const titleSize = '2.5rem';
 		<SeeMore />
 	</FullScreenWrapper>
 
-	<OptionCardsWrapper>
-		<OptionCard
-			title="Advertising"
-			titleSize={titleSize}
-			subtitle="Set a budget. Let it rip."
-			optionId={OptionId.MANAGE_ADVERTISING}
-			description="Set a fixed monthly budget and watch your engagement and sales soar."
-			gridTemplateRows={gridTemplateRows}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>Bespoke campaign plan</li>
-					<li>Actively managed campaign</li>
-					<li>Monthly reports</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £599 per month</p>
-			</div>
-		</OptionCard>
+	<FullScreenWrapper>
+		<OptionCardsWrapper>
+			<OptionCard
+				title="Advertising"
+				titleSize={titleSize}
+				subtitle="Set a budget. Let it rip."
+				optionId={OptionId.MANAGE_ADVERTISING}
+				description="Set a fixed monthly budget and watch your engagement and sales soar."
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>Bespoke campaign plan</li>
+						<li>Actively managed campaign</li>
+						<li>Monthly reports</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £599 per month</p>
+				</div>
+			</OptionCard>
 
-		<OptionCard
-			title="Social Media"
-			titleSize={titleSize}
-			subtitle="Turn off the notification bell."
-			optionId={OptionId.MANAGE_SOCIAL_MEDIA}
-			description="Take the time and stress out of social media."
-			gridTemplateRows={gridTemplateRows}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>Bespoke plan</li>
-					<li>Monthly reports</li>
-					<li>Comment moderation</li>
-					<li>Comment and message replies</li>
-					<li>Scheduled posts to all platforms</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £799 per month</p>
-			</div>
-		</OptionCard>
-	</OptionCardsWrapper>
-
-	<FullScreenWrapper />
+			<OptionCard
+				title="Social Media"
+				titleSize={titleSize}
+				subtitle="Turn off the notification bell."
+				optionId={OptionId.MANAGE_SOCIAL_MEDIA}
+				description="Take the time and stress out of social media."
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>Bespoke plan</li>
+						<li>Monthly reports</li>
+						<li>Comment moderation</li>
+						<li>Comment and message replies</li>
+						<li>Scheduled posts to all platforms</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £799 per month</p>
+				</div>
+			</OptionCard>
+		</OptionCardsWrapper>
+	</FullScreenWrapper>
 </Layout>

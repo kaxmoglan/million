@@ -50,60 +50,62 @@ const gridTemplateRows = '4fr 1fr';
 		<SeeMore />
 	</FullScreenWrapper>
 
-	<OptionCardsWrapper>
-		<OptionCard
-			title="Start up"
-			subtitle="For small businesses"
-			optionId={OptionId.HOST_START_UP}
-			gridTemplateRows={gridTemplateRows}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>Up to 10 email addresses synced across all your devices</li>
-					<li>1 year free domain</li>
-					<li>SSL certificate</li>
-					<li>DDOS protection</li>
-					<li>99.9% uptime guarantee</li>
-					<li>Up to 5 subdomains</li>
-					<li>Daily and weekly backups</li>
-					<li>Managed Wordpress hosting</li>
-					<li>Up to 2,000 users per month</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £19.99 per month</p>
-			</div>
-		</OptionCard>
+	<FullScreenWrapper>
+		<OptionCardsWrapper>
+			<OptionCard
+				title="Start up"
+				subtitle="For small businesses"
+				optionId={OptionId.HOST_START_UP}
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>Up to 10 email addresses synced across all your devices</li>
+						<li>1 year free domain</li>
+						<li>SSL certificate</li>
+						<li>DDOS protection</li>
+						<li>99.9% uptime guarantee</li>
+						<li>Up to 5 subdomains</li>
+						<li>Daily and weekly backups</li>
+						<li>Managed Wordpress hosting</li>
+						<li>Up to 2,000 users per month</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £19.99 per month</p>
+				</div>
+			</OptionCard>
 
-		<OptionCard
-			title="Scale up"
-			subtitle="For growing businesses"
-			optionId={OptionId.HOST_SCALE_UP}
-			gridTemplateRows={gridTemplateRows}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>Everything in start up</li>
-					<li>Up to 100 email addresses synced across all your devices</li>
-					<li>Up to 100 subdomains</li>
-					<li>Custom server hosting</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £49.99 per month</p>
-			</div>
-		</OptionCard>
+			<OptionCard
+				title="Scale up"
+				subtitle="For growing businesses"
+				optionId={OptionId.HOST_SCALE_UP}
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>Everything in start up</li>
+						<li>Up to 100 email addresses synced across all your devices</li>
+						<li>Up to 100 subdomains</li>
+						<li>Custom server hosting</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £49.99 per month</p>
+				</div>
+			</OptionCard>
 
-		<OptionCard
-			title="Bespoke"
-			subtitle="For something truly custom"
-			optionId={OptionId.HOST_BESPOKE}
-			description="For businesses that require something larger or more complex, get in touch to discuss your requirements."
-			showWhatYouGet={false}
-			showWhatYouPay={false}
-			gridTemplateRows={gridTemplateRows}
-		/>
-	</OptionCardsWrapper>
+			<OptionCard
+				title="Bespoke"
+				subtitle="For something truly custom"
+				optionId={OptionId.HOST_BESPOKE}
+				description="For businesses that require something larger or more complex, get in touch to discuss your requirements."
+				showWhatYouGet={false}
+				showWhatYouPay={false}
+				gridTemplateRows={gridTemplateRows}
+			/>
+		</OptionCardsWrapper>
+	</FullScreenWrapper>
 </Layout>
 
 <style lang="scss">

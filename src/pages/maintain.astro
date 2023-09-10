@@ -23,63 +23,65 @@ const optionCardContentHeight = '320px';
 		<SeeMore />
 	</FullScreenWrapper>
 
-	<OptionCardsWrapper>
-		<OptionCard
-			title="Level 1"
-			subtitle="Essential maintenance."
-			optionId={OptionId.MAINTAIN_LEVEL_1}
-			description="Essential maintenance for your website or app."
-			gridTemplateRows={gridTemplateRows}
-			contentHeight={optionCardContentHeight}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>Priority support</li>
-					<li>Compatbility udpates for new devices</li>
-					<li>Unlimited bug fixes</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £29 per month</p>
-			</div>
-		</OptionCard>
+	<FullScreenWrapper>
+		<OptionCardsWrapper>
+			<OptionCard
+				title="Level 1"
+				subtitle="Essential maintenance."
+				optionId={OptionId.MAINTAIN_LEVEL_1}
+				description="Essential maintenance for your website or app."
+				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>Priority support</li>
+						<li>Compatbility udpates for new devices</li>
+						<li>Unlimited bug fixes</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £29 per month</p>
+				</div>
+			</OptionCard>
 
-		<OptionCard
-			title="Level 2"
-			subtitle="Premium maintenance."
-			optionId={OptionId.MAINTAIN_LEVEL_2}
-			description="Premium maintenance for your website or app."
-			gridTemplateRows={gridTemplateRows}
-			contentHeight={optionCardContentHeight}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>Everything under Level 1</li>
-					<li>10% off everything</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £79 per month</p>
-			</div>
-		</OptionCard>
+			<OptionCard
+				title="Level 2"
+				subtitle="Premium maintenance."
+				optionId={OptionId.MAINTAIN_LEVEL_2}
+				description="Premium maintenance for your website or app."
+				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>Everything under Level 1</li>
+						<li>10% off everything</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £79 per month</p>
+				</div>
+			</OptionCard>
 
-		<OptionCard
-			title="Level 3"
-			subtitle="Ultimate maintenance."
-			optionId={OptionId.MAINTAIN_LEVEL_3}
-			description="Ultimate maintenance for your website or app."
-			gridTemplateRows={gridTemplateRows}
-			contentHeight={optionCardContentHeight}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>Everything under Level 1</li>
-					<li>15% off everything</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £149 per month</p>
-			</div>
-		</OptionCard>
-	</OptionCardsWrapper>
+			<OptionCard
+				title="Level 3"
+				subtitle="Ultimate maintenance."
+				optionId={OptionId.MAINTAIN_LEVEL_3}
+				description="Ultimate maintenance for your website or app."
+				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>Everything under Level 1</li>
+						<li>15% off everything</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £149 per month</p>
+				</div>
+			</OptionCard>
+		</OptionCardsWrapper>
+	</FullScreenWrapper>
 </Layout>

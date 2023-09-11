@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FullScreenWrapper from '../components/wrappers/FullScreenWrapper.astro';
+import NarrowWrapper from '../components/wrappers/NarrowWrapper.astro';
+import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
+import ActionButton from '../components/ActionButton.astro';
+---
+
+<Layout title="Million Digital - Beyond" hideBackToTop>
+	<FullScreenWrapper>
+		<NarrowWrapper>
+			<FlexWrapper flexDirection="column" className="page__header">
+				<h1>oops<span class="full-stop">!</span></h1>
+				<h3>Looks like we couldn't find what you're looking for.</h3>
+				<ActionButton text="Get back on track" href="/" />
+			</FlexWrapper>
+		</NarrowWrapper>
+	</FullScreenWrapper>
+</Layout>

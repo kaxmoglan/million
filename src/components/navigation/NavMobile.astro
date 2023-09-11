@@ -89,12 +89,22 @@ import NavigationTiles from './NavigationTiles.astro';
 		align-items: center;
 		transition-duration: 320ms;
 
+		&__menu {
+			width: 100%;
+			max-width: 1000px;
+			visibility: hidden;
+			opacity: 0;
+			transform: translateY(-20px);
+			transition-duration: 150ms;
+		}
+
 		&.open {
 			height: 100vh;
 			position: fixed;
 			overflow: scroll;
 			background-color: rgba(37, 37, 37, 0.6);
 			backdrop-filter: blur(20px);
+			padding-bottom: 25vh;
 
 			.mobile-nav__menu {
 				visibility: visible;
@@ -103,15 +113,6 @@ import NavigationTiles from './NavigationTiles.astro';
 				transition-duration: 250ms;
 				transition-delay: 150ms;
 			}
-		}
-
-		&__menu {
-			width: 100%;
-			max-width: 1000px;
-			visibility: hidden;
-			opacity: 0;
-			transform: translateY(-20px);
-			transition-duration: 150ms;
 		}
 	}
 

@@ -70,6 +70,7 @@ import FullScreenWrapper from '../wrappers/FullScreenWrapper.astro';
 			height: 1.75rem;
 			background-color: $white;
 			transition: all 250ms ease-in-out;
+			animation: logoWelcomeAnimation 500ms 500ms ease-in-out;
 
 			@include lg-screen {
 				top: 2rem;
@@ -124,6 +125,18 @@ import FullScreenWrapper from '../wrappers/FullScreenWrapper.astro';
 
 		@include xxs-screen {
 			font-size: 1rem;
+		}
+	}
+
+	@keyframes logoWelcomeAnimation {
+		0% {
+			transform: translateY(0px);
+		}
+		50% {
+			transform: translateY(-5px);
+		}
+		100% {
+			transform: translateY(0px);
 		}
 	}
 </style>

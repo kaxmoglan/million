@@ -28,64 +28,65 @@ const titleSize = '2.5rem';
 	</FullScreenWrapper>
 
 	<FullScreenWrapper>
-		<OptionCardsWrapper />
-		<OptionCard
-			title="Photo Editing"
-			titleSize={titleSize}
-			subtitle="Your custom filter."
-			optionId={OptionId.EDIT_PHOTO}
-			description="Remove unwanted objects, add text, lighten, darken, effects and more. We can work on a single photo or help you create your own style across a series of photographs."
-			gridTemplateRows={gridTemplateRows}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>Edited photos in full size resolution</li>
-					<li>Edited photos in web-ready size and format</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £99</p>
-			</div>
-		</OptionCard>
+		<OptionCardsWrapper>
+			<OptionCard
+				title="Photo Editing"
+				titleSize={titleSize}
+				subtitle="Your custom filter."
+				optionId={OptionId.EDIT_PHOTO}
+				description="Remove unwanted objects, add text, lighten, darken, effects and more. We can work on a single photo or help you create your own style across a series of photographs."
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>Edited photos in full size resolution</li>
+						<li>Edited photos in web-ready size and format</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £99</p>
+				</div>
+			</OptionCard>
 
-		<OptionCard
-			title="Audio Editing"
-			titleSize={titleSize}
-			subtitle="Turn it up."
-			optionId={OptionId.EDIT_AUDIO}
-			description="Remove unwanted background noise and silence, add a soundtrack or sound effects and compress, EQ and normalise the audio so it sounds perfect on all platforms and devices."
-			gridTemplateRows={gridTemplateRows}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>Mastered audio file in lossless format for video</li>
-					<li>Mastered audio file in lossy format for web</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £199</p>
-			</div>
-		</OptionCard>
+			<OptionCard
+				title="Audio Editing"
+				titleSize={titleSize}
+				subtitle="Turn it up."
+				optionId={OptionId.EDIT_AUDIO}
+				description="Remove unwanted background noise and silence, add a soundtrack or sound effects and compress, EQ and normalise the audio so it sounds perfect on all platforms and devices."
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>Mastered audio file in lossless format for video</li>
+						<li>Mastered audio file in lossy format for web</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £199</p>
+				</div>
+			</OptionCard>
 
-		<OptionCard
-			title="Video Editing"
-			titleSize={titleSize}
-			subtitle="Pro motion engagement."
-			optionId={OptionId.EDIT_VIDEO}
-			description="Good video editing is the difference between a watched video and a skipped one. Engage new and existing customers like never before with professionally edited videos delivered in the proper formats and resolution for every platform you’re customers are on."
-			gridTemplateRows={gridTemplateRows}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>
-						Edited video files in the perfect size and quality for all your
-						social platforms.
-					</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £299</p>
-			</div>
-		</OptionCard>
+			<OptionCard
+				title="Video Editing"
+				titleSize={titleSize}
+				subtitle="Pro motion engagement."
+				optionId={OptionId.EDIT_VIDEO}
+				description="Good video editing is the difference between a watched video and a skipped one. Engage new and existing customers like never before with professionally edited videos delivered in the proper formats and resolution for every platform you’re customers are on."
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>
+							Edited video files in the perfect size and quality for all your
+							social platforms.
+						</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £299</p>
+				</div>
+			</OptionCard>
+		</OptionCardsWrapper>
 	</FullScreenWrapper>
 </Layout>

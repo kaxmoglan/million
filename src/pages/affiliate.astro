@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FullScreenWrapper from '../components/wrappers/FullScreenWrapper.astro';
+import NarrowWrapper from '../components/wrappers/NarrowWrapper.astro';
+import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
+import ActionButton from '../components/ActionButton.astro';
+import { OptionId } from '../utils/optionCardUtils';
+---
+
+<Layout title="Million Digital - Beyond" hideBackToTop>
+	<FullScreenWrapper>
+		<NarrowWrapper>
+			<FlexWrapper flexDirection="column" className="page__header">
+				<h1>affiliate<span class="full-stop">.</span></h1>
+				<h3>
+					Earn passive income from Million with our affiliate program.
+					Affiliates earn 10% of all profit from an affiliated client... for
+					life.
+				</h3>
+				<ActionButton
+					text="Become an affiliate"
+					href={`../contact?selected-option=${OptionId.AFFILIATE}`}
+				/>
+			</FlexWrapper>
+		</NarrowWrapper>
+	</FullScreenWrapper>
+</Layout>

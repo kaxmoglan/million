@@ -31,68 +31,69 @@ const optionCardContentHeight = '380px';
 	</FullScreenWrapper>
 
 	<FullScreenWrapper>
-		<OptionCardsWrapper />
-		<OptionCard
-			title="Step 1"
-			subtitle="Concept"
-			optionId={OptionId.DESIGN_CONCEPT}
-			description="You tell us what you’re looking for and give us your brief. This can be as vague or as detailed as you’d like."
-			gridTemplateRows={gridTemplateRows}
-			contentHeight={optionCardContentHeight}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>3 design concepts</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £199 for misc.</p>
-				<p>From £299 for logos</p>
-				<p>From £599 for websites and apps</p>
-			</div>
-		</OptionCard>
+		<OptionCardsWrapper>
+			<OptionCard
+				title="Step 1"
+				subtitle="Concept"
+				optionId={OptionId.DESIGN_CONCEPT}
+				description="You tell us what you’re looking for and give us your brief. This can be as vague or as detailed as you’d like."
+				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>3 design concepts</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £199 for misc.</p>
+					<p>From £299 for logos</p>
+					<p>From £599 for websites and apps</p>
+				</div>
+			</OptionCard>
 
-		<OptionCard
-			title="Step 2"
-			subtitle="Prototype"
-			optionId={OptionId.DESIGN_PROTOTYPE}
-			description="Pick one of our concepts and we'll refine your favourite design."
-			gridTemplateRows={gridTemplateRows}
-			contentHeight={optionCardContentHeight}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>A refined prototype design</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £49 for misc.</p>
-				<p>From £199 for logos</p>
-				<p>From £599 for websites and apps</p>
-			</div>
-		</OptionCard>
+			<OptionCard
+				title="Step 2"
+				subtitle="Prototype"
+				optionId={OptionId.DESIGN_PROTOTYPE}
+				description="Pick one of our concepts and we'll refine your favourite design."
+				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>A refined prototype design</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £49 for misc.</p>
+					<p>From £199 for logos</p>
+					<p>From £599 for websites and apps</p>
+				</div>
+			</OptionCard>
 
-		<OptionCard
-			title="Step 3"
-			subtitle="Delivery"
-			optionId={OptionId.DESIGN_DELIVERY}
-			description="Once you're happy with the prototype, we finalise your design and give you all the deliverables."
-			gridTemplateRows={gridTemplateRows}
-			contentHeight={optionCardContentHeight}
-		>
-			<div slot="what-you-get">
-				<ul>
-					<li>
-						The finished image files ready for commercial use, or deployed
-						website or app
-					</li>
-				</ul>
-			</div>
-			<div slot="what-you-pay">
-				<p>From £49 for misc.</p>
-				<p>From £99 for logos</p>
-				<p>From £299 for websites and apps</p>
-			</div>
-		</OptionCard>
+			<OptionCard
+				title="Step 3"
+				subtitle="Delivery"
+				optionId={OptionId.DESIGN_DELIVERY}
+				description="Once you're happy with the prototype, we finalise your design and give you all the deliverables."
+				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>
+							The finished image files ready for commercial use, or deployed
+							website or app
+						</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £49 for misc.</p>
+					<p>From £99 for logos</p>
+					<p>From £299 for websites and apps</p>
+				</div>
+			</OptionCard>
+		</OptionCardsWrapper>
 	</FullScreenWrapper>
 </Layout>

@@ -4,6 +4,7 @@ import FullScreenWrapper from '../components/wrappers/FullScreenWrapper.astro';
 import NarrowWrapper from '../components/wrappers/NarrowWrapper.astro';
 import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
 import ActionButton from '../components/ActionButton.astro';
+import { OptionId } from '../utils/optionCardUtils';
 ---
 
 <Layout title="Million Digital - Beyond" hideBackToTop>
@@ -24,7 +25,10 @@ import ActionButton from '../components/ActionButton.astro';
 					 If you have an idea, get in touch! It’s rare that we can’t offer any
 					help.
 				</h3>
-				<ActionButton text="Get in touch" href="contact" />
+				<ActionButton
+					text="Get in touch"
+					href={`../contact?selected-option=${OptionId.BEYOND}`}
+				/>
 			</FlexWrapper>
 		</NarrowWrapper>
 	</FullScreenWrapper>

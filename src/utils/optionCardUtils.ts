@@ -21,6 +21,7 @@ export enum OptionId {
 	MAINTAIN_LEVEL_2 = 'maintain-level-2',
 	MAINTAIN_LEVEL_3 = 'maintain-level-3',
 	AFFILIATE = 'affiliate',
+	BEYOND = 'beyond',
 }
 
 export const getFormSubject = (buttonId: OptionId): string => {
@@ -90,6 +91,9 @@ export const getFormSubject = (buttonId: OptionId): string => {
 
 		case OptionId.AFFILIATE:
 			return `Become A Million Affiliate`;
+
+		case OptionId.BEYOND:
+			return `To A Million, And Beyond!`;
 
 		default:
 			throw new Error('Unknown OptionCardId');

@@ -27,7 +27,7 @@ export enum OptionId {
 	BEYOND = 'beyond',
 }
 
-export const getFormSubject = (buttonId: OptionId): string => {
+export const getFormSubject = (buttonId: string): string => {
 	switch (buttonId) {
 		case OptionId.DESIGN_CONCEPT:
 			return 'Design Concept Enquiry';

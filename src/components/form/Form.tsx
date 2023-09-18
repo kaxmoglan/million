@@ -1,26 +1,67 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './form.module.scss';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
+import { getFormSubject } from '../../utils/optionCardUtils';
 
 export const Form = () => {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [errors, setErrors] = useState<Array<string>>([]);
+	const [name, setName] = useState<string>();
+	const [email, setEmail] = useState<string>();
+	const [subject, setSubject] = useState<string>('');
+	const [message, setMessage] = useState<string>('');
+
+	useEffect(() => {
+		const searchParams = new URLSearchParams(document.location.search);
+		const selectedOption = searchParams.get('selected-option');
+		setSubject(selectedOption ? getFormSubject(selectedOption) : '');
+	}, []);
+
+	const handleName = (e: React.ChangeEvent<HTMLInputElement>) =>
+		setName(e.target.value);
+	const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) =>
+		setEmail(e.target.value);
+	const handleSubject = (e: React.ChangeEvent<HTMLInputElement>) =>
+		setSubject(e.target.value);
+	const handleMessage = (e: React.ChangeEvent<HTMLInputElement>) =>
+		setMessage(e.target.value);
 
 	const handleSubmit = () => alert('Form submitted');
 
 	return (
 		<div className={styles.container}>
 			<form className={styles.contactForm} onSubmit={handleSubmit}>
-				<StyledTextField label="Name" variant="outlined" required />
-				<StyledTextField label="Email" variant="outlined" required />
+				<StyledTextField
+					label="Name"
+					variant="outlined"
+					required
+					onChange={handleName}
+					value={name}
+				/>
+				<StyledTextField
+					label="Email"
+					variant="outlined"
+					required
+					onChange={handleEmail}
+					value={email}
+				/>
+				<StyledTextField
+					label="Subject"
+					variant="outlined"
+					required
+					onChange={handleSubject}
+					value={subject}
+				/>
 				<StyledTextField
 					label="Message"
 					variant="outlined"
 					required
 					multiline
 					rows={8}
+					onChange={handleMessage}
+					value={message}
 				/>
 				<StyledButton type="submit" onSubmit={handleSubmit} variant="outlined">
 					Send

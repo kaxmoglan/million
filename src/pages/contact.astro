@@ -1,9 +1,54 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import FullScreenWrapper from '../components/wrappers/FullScreenWrapper.astro';
+import NarrowWrapper from '../components/wrappers/NarrowWrapper.astro';
+import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
+import SeeMore from '../components/SeeMore.astro';
+import { Form } from '../components/form/Form';
 ---
 
-<Layout title="Contact">
-	<h1>Contact</h1>
+<Layout title="Million Digital - Contact">
+	<FullScreenWrapper>
+		<NarrowWrapper>
+			<FlexWrapper flexDirection="column" className="page__header">
+				<h1>contact<span class="full-stop">.</span></h1>
+				<h3>
+					For any questions and enquiries, get in touch using our contact form
+					below.
+				</h3>
+			</FlexWrapper>
+		</NarrowWrapper>
+		<SeeMore targetId="contact-form-section" />
+	</FullScreenWrapper>
 
-	<p id="subject-text"></p>
+	<div id="contact-form-section">
+		<h2>Get in touch<span class="text-highlight">.</span></h2>
+		<Form client:load />
+	</div>
 </Layout>
+
+<style lang="scss">
+	@import '../styles/main';
+
+	#contact-form-section {
+		min-height: 100vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		justify-content: center;
+		align-items: center;
+		padding: 0 2rem;
+	}
+
+	h2 {
+		font-size: 4rem;
+
+		@include xs-screen {
+			font-size: 2.6rem;
+		}
+		@include xxs-screen {
+			font-size: 2rem;
+		}
+	}
+</style>

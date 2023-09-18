@@ -1,8 +1,11 @@
-@import '../../styles/colors.scss';
+@import '../../styles/main.scss';
 
 .container {
 	display: flex;
 	justify-content: center;
+	max-width: 400px;
+	width: 100%;
+	margin: 0 2rem;
 }
 
 .contactForm {
@@ -11,6 +14,10 @@
 	flex-direction: column;
 	justify-content: center;
 	gap: 1.5rem;
+
+	@include xs-screen {
+		width: 100%;
+	}
 }
 
 :export {

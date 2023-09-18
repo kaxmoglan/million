@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FullScreenWrapper from '../components/wrappers/FullScreenWrapper.astro';
+import NarrowWrapper from '../components/wrappers/NarrowWrapper.astro';
+import FlexWrapper from '../components/wrappers/FlexWrapper.astro';
+import OptionCardsWrapper from '../components/wrappers/OptionCardsWrapper.astro';
+import OptionCard from '../components/OptionCard.astro';
+import SeeMore from '../components/SeeMore.astro';
+import { OptionId } from '../utils/optionCardUtils';
+
+const gridTemplateRows = '1.5fr 3fr 1fr';
+const optionCardContentHeight = '350px';
+---
+
+<Layout title="Million Digital - SEO">
+	<FullScreenWrapper>
+		<NarrowWrapper>
+			<FlexWrapper flexDirection="column" className="page__header">
+				<h1>SEO<span class="full-stop">.</span></h1>
+				<h3>Drive traffic organically with our SEO services.</h3>
+				<h3>
+					Our 3 step process takes you from a fully comprehensive report across
+					your entire online presence, to a bespoke plan designed to drive
+					natural traffic and gain new customers, right the way through to
+					implementing our plan. After completion, we provide you with a fully
+					comprehensive follow-up report.
+				</h3>
+			</FlexWrapper>
+		</NarrowWrapper>
+		<SeeMore />
+	</FullScreenWrapper>
+
+	<FullScreenWrapper>
+		<OptionCardsWrapper>
+			<OptionCard
+				title="Report"
+				subtitle="See the whole picture."
+				optionId={OptionId.SEO_REPORT}
+				description="Gain deep insights into your entire online presence."
+				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>Fully comprehensive report of your entire online presence</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £199</p>
+				</div>
+			</OptionCard>
+
+			<OptionCard
+				title="Plan"
+				subtitle="A huge step forwards."
+				optionId={OptionId.SEO_PLAN}
+				description="We work with you to create a bespoke plan to maximise your SEO potential and drive traffic organically to all your platforms."
+				contentHeight={optionCardContentHeight}
+				gridTemplateRows={gridTemplateRows}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>A bsepoke plan tailored to your needs</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £199</p>
+				</div>
+			</OptionCard>
+
+			<OptionCard
+				title="Execute"
+				subtitle="Go go go!"
+				optionId={OptionId.SEO_EXECUTE}
+				description="We implement our bespoke plan and watch your traffic grow!"
+				gridTemplateRows={gridTemplateRows}
+				contentHeight={optionCardContentHeight}
+			>
+				<div slot="what-you-get">
+					<ul>
+						<li>Your plan implemented across all your platforms</li>
+						<li>
+							A follow-up fully comprehensive report where we let the numbers do
+							the talking!
+						</li>
+					</ul>
+				</div>
+				<div slot="what-you-pay">
+					<p>From £299</p>
+				</div>
+			</OptionCard>
+		</OptionCardsWrapper>
+	</FullScreenWrapper>
+</Layout>

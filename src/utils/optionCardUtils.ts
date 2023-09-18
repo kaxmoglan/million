@@ -20,6 +20,9 @@ export enum OptionId {
 	MAINTAIN_LEVEL_1 = 'maintain-level-1',
 	MAINTAIN_LEVEL_2 = 'maintain-level-2',
 	MAINTAIN_LEVEL_3 = 'maintain-level-3',
+	SEO_REPORT = 'seo-report',
+	SEO_PLAN = 'seo-plan',
+	SEO_EXECUTE = 'seo-execute',
 	AFFILIATE = 'affiliate',
 	BEYOND = 'beyond',
 }
@@ -88,6 +91,15 @@ export const getFormSubject = (buttonId: OptionId): string => {
 
 		case OptionId.MAINTAIN_LEVEL_3:
 			return `Level 3 Maintenance Enquiry`;
+
+		case OptionId.SEO_REPORT:
+			return `SEO Report Enquiry`;
+
+		case OptionId.SEO_PLAN:
+			return `SEO Plan Enquiry`;
+
+		case OptionId.SEO_EXECUTE:
+			return `SEO Execute Enquiry`;
 
 		case OptionId.AFFILIATE:
 			return `Become A Million Affiliate`;
